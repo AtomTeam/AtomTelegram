@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "333582466896",
+    "project_id": "atomtelegram"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333582466896:android:0431275a131b9c9a",
+        "android_client_info": {
+          "package_name": "org.atomgram.messenger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzq2VxWrAe6X9jD9vRNXUQ-e9TiR7U8lQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333582466896:android:f23179ab5b434426",
+        "android_client_info": {
+          "package_name": "org.atomgram.messenger.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333582466896-1s9rmqao7pifhe7i57s4mr65afvih5vc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.atomgram.messenger.beta",
+            "certificate_hash": "33756a9708f920383a40cde99ffe092e8ceb310d"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzq2VxWrAe6X9jD9vRNXUQ-e9TiR7U8lQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
