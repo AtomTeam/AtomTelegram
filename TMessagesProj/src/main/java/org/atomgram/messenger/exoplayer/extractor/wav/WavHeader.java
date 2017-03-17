@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.wav;
+package org.atomgram.messenger.exoplayer.extractor.wav;
 
-import org.telegram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.C;
 
 /** Header for a WAV file. */
 /*package*/ final class WavHeader {

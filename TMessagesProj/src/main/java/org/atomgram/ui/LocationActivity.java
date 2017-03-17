@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.Manifest;
 import android.animation.AnimatorSet;
@@ -53,27 +53,27 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.Adapters.BaseLocationAdapter;
-import org.telegram.ui.Adapters.LocationActivityAdapter;
-import org.telegram.ui.Adapters.LocationActivitySearchAdapter;
-import org.telegram.ui.Components.AvatarDrawable;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.MapPlaceholderDrawable;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.Adapters.BaseLocationAdapter;
+import org.atomgram.ui.Adapters.LocationActivityAdapter;
+import org.atomgram.ui.Adapters.LocationActivitySearchAdapter;
+import org.atomgram.ui.Components.AvatarDrawable;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.MapPlaceholderDrawable;
 
 import java.util.ArrayList;
 import java.util.List;

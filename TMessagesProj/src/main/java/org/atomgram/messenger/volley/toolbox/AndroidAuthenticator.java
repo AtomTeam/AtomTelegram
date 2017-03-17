@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley.toolbox;
+package org.atomgram.messenger.volley.toolbox;
 
-import org.telegram.messenger.volley.AuthFailureError;
+import org.atomgram.messenger.volley.AuthFailureError;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;

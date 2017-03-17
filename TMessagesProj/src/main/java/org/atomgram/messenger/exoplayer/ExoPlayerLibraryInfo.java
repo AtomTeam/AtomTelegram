@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 /**
  * Information about the ExoPlayer library.
@@ -35,13 +35,13 @@ public final class ExoPlayerLibraryInfo {
   public static final int VERSION_INT = 1005010;
 
   /**
-   * Whether the library was compiled with {@link org.telegram.messenger.exoplayer.util.Assertions}
+   * Whether the library was compiled with {@link org.atomgram.messenger.exoplayer.util.Assertions}
    * checks enabled.
    */
   public static final boolean ASSERTIONS_ENABLED = true;
 
   /**
-   * Whether the library was compiled with {@link org.telegram.messenger.exoplayer.util.TraceUtil}
+   * Whether the library was compiled with {@link org.atomgram.messenger.exoplayer.util.TraceUtil}
    * trace enabled.
    */
   public static final boolean TRACE_ENABLED = true;

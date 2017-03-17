@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger.camera;
+package org.atomgram.messenger.camera;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -20,12 +20,12 @@ import android.media.ThumbnailUtils;
 import android.os.Build;
 import android.provider.MediaStore;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Bitmaps;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.Utilities;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.Bitmaps;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.ImageLoader;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.Utilities;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -439,7 +439,7 @@ public class CameraController implements MediaRecorder.OnInfoListener {
                     recorder.setMaxFileSize(1024 * 1024 * 1024);
                     recorder.setVideoFrameRate(30);
                     recorder.setMaxDuration(0);
-                    org.telegram.messenger.camera.Size pictureSize = new Size(16, 9);
+                    org.atomgram.messenger.camera.Size pictureSize = new Size(16, 9);
                     pictureSize = CameraController.chooseOptimalSize(info.getPictureSizes(), 720, 480, pictureSize);
                     recorder.setVideoSize(pictureSize.getWidth(), pictureSize.getHeight());
                     recorder.setVideoEncodingBitRate(900000 * 2);

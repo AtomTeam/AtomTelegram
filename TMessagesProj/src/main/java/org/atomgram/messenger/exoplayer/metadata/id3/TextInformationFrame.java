@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.metadata.id3;
+package org.atomgram.messenger.exoplayer.metadata.id3;
 
 /**
  * Text information ("T000" - "TZZZ", excluding "TXXX") ID3 frame.

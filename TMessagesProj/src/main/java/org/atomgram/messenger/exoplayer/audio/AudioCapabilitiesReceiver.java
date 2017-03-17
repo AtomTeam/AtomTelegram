@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.audio;
+package org.atomgram.messenger.exoplayer.audio;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Util;
 
 /**
  * Notifies a listener when the audio playback capabilities change. Call {@link #register} to start

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash.mpd;
+package org.atomgram.messenger.exoplayer.dash.mpd;
 
-import org.telegram.messenger.exoplayer.util.ManifestFetcher.RedirectingManifest;
+import org.atomgram.messenger.exoplayer.util.ManifestFetcher.RedirectingManifest;
 import java.util.Collections;
 import java.util.List;
 

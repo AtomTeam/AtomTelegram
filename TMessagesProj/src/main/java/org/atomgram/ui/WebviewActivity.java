@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -26,23 +26,23 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.tgnet.SerializedData;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.ContextProgressView;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.ShareAlert;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.tgnet.SerializedData;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.ContextProgressView;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.ShareAlert;
 
 import java.net.URLEncoder;
 
@@ -61,7 +61,7 @@ public class WebviewActivity extends BaseFragment {
     private final static int share = 1;
     private final static int open_in = 2;
 
-    private class TelegramWebviewProxy {
+    private class AtomgramWebviewProxy {
         @JavascriptInterface
         public void postEvent(final String eventName, final String eventData) {
             AndroidUtilities.runOnUIThread(new Runnable() {
@@ -92,7 +92,7 @@ public class WebviewActivity extends BaseFragment {
         currentGame = gameName;
         currentMessageObject = messageObject;
         short_param = startParam;
-        linkToCopy = "https://telegram.me/" + currentBot + (TextUtils.isEmpty(startParam) ? "" : "?game=" + startParam);
+        linkToCopy = "https://Atomgram.me/" + currentBot + (TextUtils.isEmpty(startParam) ? "" : "?game=" + startParam);
     }
 
     @Override
@@ -153,7 +153,7 @@ public class WebviewActivity extends BaseFragment {
             webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
             CookieManager cookieManager = CookieManager.getInstance();
             cookieManager.setAcceptThirdPartyCookies(webView, true);
-            webView.addJavascriptInterface(new TelegramWebviewProxy(), "TelegramWebviewProxy");
+            webView.addJavascriptInterface(new AtomgramWebviewProxy(), "AtomgramWebviewProxy");
         }
 
         webView.setWebViewClient(new WebViewClient() {
@@ -244,7 +244,7 @@ public class WebviewActivity extends BaseFragment {
             SerializedData serializedData = new SerializedData(messageObject.messageOwner.getObjectSize());
             messageObject.messageOwner.serializeToStream(serializedData);
             editor.putString(hash + "_m", Utilities.bytesToHex(serializedData.toByteArray()));
-            editor.putString(hash + "_link", "https://telegram.me/" + username + (TextUtils.isEmpty(short_name) ? "" : "?game=" + short_name));
+            editor.putString(hash + "_link", "https://Atomgram.me/" + username + (TextUtils.isEmpty(short_name) ? "" : "?game=" + short_name));
             editor.commit();
             Browser.openUrl(parentActivity, url, false);
         } catch (Exception e) {

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.chunk;
+package org.atomgram.messenger.exoplayer.chunk;
 
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.extractor.DefaultTrackOutput;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.extractor.DefaultTrackOutput;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
 
 /**
  * A base implementation of {@link MediaChunk}, for chunks that contain a single track.

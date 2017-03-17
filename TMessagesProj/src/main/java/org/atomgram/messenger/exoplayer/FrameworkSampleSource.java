@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.MediaExtractor;
 import android.net.Uri;
-import org.telegram.messenger.exoplayer.SampleSource.SampleSourceReader;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.drm.DrmInitData.SchemeInitData;
-import org.telegram.messenger.exoplayer.extractor.ExtractorSampleSource;
-import org.telegram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.SampleSource.SampleSourceReader;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData.SchemeInitData;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorSampleSource;
+import org.atomgram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.nio.ByteBuffer;

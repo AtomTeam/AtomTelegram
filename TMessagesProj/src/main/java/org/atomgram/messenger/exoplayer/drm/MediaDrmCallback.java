@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.drm;
+package org.atomgram.messenger.exoplayer.drm;
 
 import android.annotation.TargetApi;
-import org.telegram.messenger.exoplayer.drm.ExoMediaDrm.KeyRequest;
-import org.telegram.messenger.exoplayer.drm.ExoMediaDrm.ProvisionRequest;
+import org.atomgram.messenger.exoplayer.drm.ExoMediaDrm.KeyRequest;
+import org.atomgram.messenger.exoplayer.drm.ExoMediaDrm.ProvisionRequest;
 import java.util.UUID;
 
 /**

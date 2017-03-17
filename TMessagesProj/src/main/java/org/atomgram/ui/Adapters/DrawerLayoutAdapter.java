@@ -1,27 +1,27 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Adapters;
+package org.atomgram.ui.Adapters;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.Cells.DrawerActionCell;
-import org.telegram.ui.Cells.DividerCell;
-import org.telegram.ui.Cells.EmptyCell;
-import org.telegram.ui.Cells.DrawerProfileCell;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.Cells.DrawerActionCell;
+import org.atomgram.ui.Cells.DividerCell;
+import org.atomgram.ui.Cells.EmptyCell;
+import org.atomgram.ui.Cells.DrawerProfileCell;
 
 public class DrawerLayoutAdapter extends BaseAdapter {
 
@@ -98,7 +98,7 @@ public class DrawerLayoutAdapter extends BaseAdapter {
             } else if (i == 8) {
                 actionCell.setTextAndIcon(LocaleController.getString("Settings", R.string.Settings), R.drawable.menu_settings);
             } else if (i == 9) {
-                actionCell.setTextAndIcon(LocaleController.getString("TelegramFaq", R.string.TelegramFaq), R.drawable.menu_help);
+                actionCell.setTextAndIcon(LocaleController.getString("AtomgramFaq", R.string.AtomgramFaq), R.drawable.menu_help);
             }
         }
 

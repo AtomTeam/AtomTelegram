@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -54,31 +54,31 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationsController;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.query.DraftQuery;
-import org.telegram.messenger.query.MessagesQuery;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.ChatActivity;
-import org.telegram.ui.DialogsActivity;
-import org.telegram.ui.StickersActivity;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.Emoji;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.NotificationsController;
+import org.atomgram.messenger.SendMessagesHelper;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.query.DraftQuery;
+import org.atomgram.messenger.query.MessagesQuery;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.DialogsActivity;
+import org.atomgram.ui.StickersActivity;
 
 import java.io.File;
 import java.lang.reflect.Field;

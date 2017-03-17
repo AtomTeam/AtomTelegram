@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -48,29 +48,29 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.HintEditText;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.SlideView;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.BuildVars;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.HintEditText;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.SlideView;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -350,10 +350,10 @@ public class LoginActivity extends BaseFragment {
                     mailer.putExtra(Intent.EXTRA_EMAIL, new String[]{"login@stel.com"});
                     if (banned) {
                         mailer.putExtra(Intent.EXTRA_SUBJECT, "Banned phone number: " + phoneNumber);
-                        mailer.putExtra(Intent.EXTRA_TEXT, "I'm trying to use my mobile phone number: " + phoneNumber + "\nBut Telegram says it's banned. Please help.\n\nApp version: " + version + "\nOS version: SDK " + Build.VERSION.SDK_INT + "\nDevice Name: " + Build.MANUFACTURER + Build.MODEL + "\nLocale: " + Locale.getDefault());
+                        mailer.putExtra(Intent.EXTRA_TEXT, "I'm trying to use my mobile phone number: " + phoneNumber + "\nBut Atomgram says it's banned. Please help.\n\nApp version: " + version + "\nOS version: SDK " + Build.VERSION.SDK_INT + "\nDevice Name: " + Build.MANUFACTURER + Build.MODEL + "\nLocale: " + Locale.getDefault());
                     } else {
                         mailer.putExtra(Intent.EXTRA_SUBJECT, "Invalid phone number: " + phoneNumber);
-                        mailer.putExtra(Intent.EXTRA_TEXT, "I'm trying to use my mobile phone number: " + phoneNumber + "\nBut Telegram says it's invalid. Please help.\n\nApp version: " + version + "\nOS version: SDK " + Build.VERSION.SDK_INT + "\nDevice Name: " + Build.MANUFACTURER + Build.MODEL + "\nLocale: " + Locale.getDefault());
+                        mailer.putExtra(Intent.EXTRA_TEXT, "I'm trying to use my mobile phone number: " + phoneNumber + "\nBut Atomgram says it's invalid. Please help.\n\nApp version: " + version + "\nOS version: SDK " + Build.VERSION.SDK_INT + "\nDevice Name: " + Build.MANUFACTURER + Build.MODEL + "\nLocale: " + Locale.getDefault());
                     }
                     getParentActivity().startActivity(Intent.createChooser(mailer, "Send email..."));
                 } catch (Exception e) {

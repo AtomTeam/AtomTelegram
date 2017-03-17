@@ -15,7 +15,7 @@
  */
 
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import java.util.ArrayList;
 

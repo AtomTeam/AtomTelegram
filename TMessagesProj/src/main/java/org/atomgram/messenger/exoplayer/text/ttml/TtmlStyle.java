@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.ttml;
+package org.atomgram.messenger.exoplayer.text.ttml;
 
 import android.graphics.Typeface;
 import android.text.Layout;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 
 /**
  * Style object of a <code>TtmlNode</code>

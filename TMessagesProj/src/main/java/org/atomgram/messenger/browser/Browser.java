@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger.browser;
+package org.atomgram.messenger.browser;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -19,22 +19,22 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.ShareBroadcastReceiver;
-import org.telegram.messenger.support.customtabs.CustomTabsCallback;
-import org.telegram.messenger.support.customtabs.CustomTabsClient;
-import org.telegram.messenger.support.customtabs.CustomTabsIntent;
-import org.telegram.messenger.support.customtabs.CustomTabsServiceConnection;
-import org.telegram.messenger.support.customtabs.CustomTabsSession;
-import org.telegram.messenger.support.customtabsclient.shared.CustomTabsHelper;
-import org.telegram.messenger.support.customtabsclient.shared.ServiceConnection;
-import org.telegram.messenger.support.customtabsclient.shared.ServiceConnectionCallback;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.LaunchActivity;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.ShareBroadcastReceiver;
+import org.atomgram.messenger.support.customtabs.CustomTabsCallback;
+import org.atomgram.messenger.support.customtabs.CustomTabsClient;
+import org.atomgram.messenger.support.customtabs.CustomTabsIntent;
+import org.atomgram.messenger.support.customtabs.CustomTabsServiceConnection;
+import org.atomgram.messenger.support.customtabs.CustomTabsSession;
+import org.atomgram.messenger.support.customtabsclient.shared.CustomTabsHelper;
+import org.atomgram.messenger.support.customtabsclient.shared.ServiceConnection;
+import org.atomgram.messenger.support.customtabsclient.shared.ServiceConnectionCallback;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.LaunchActivity;
 
 import java.lang.ref.WeakReference;
 
@@ -192,6 +192,6 @@ public class Browser {
     public static boolean isInternalUri(Uri uri) {
         String host = uri.getHost();
         host = host != null ? host.toLowerCase() : "";
-        return "tg".equals(uri.getScheme()) || "telegram.me".equals(host) || "telegram.dog".equals(host);
+        return "tg".equals(uri.getScheme()) || "Atomgram.me".equals(host) || "Atomgram.dog".equals(host);
     }
 }

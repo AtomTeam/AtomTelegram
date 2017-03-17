@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Adapters;
+package org.atomgram.ui.Adapters;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -14,32 +14,32 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.telegram.SQLite.SQLiteCursor;
-import org.telegram.SQLite.SQLitePreparedStatement;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.query.SearchQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.NativeByteBuffer;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Cells.DialogCell;
-import org.telegram.ui.Cells.GreySectionCell;
-import org.telegram.ui.Cells.HashtagSearchCell;
-import org.telegram.ui.Cells.HintDialogCell;
-import org.telegram.ui.Cells.LoadingCell;
-import org.telegram.ui.Cells.ProfileSearchCell;
-import org.telegram.ui.Components.RecyclerListView;
+import org.atomgram.SQLite.SQLiteCursor;
+import org.atomgram.SQLite.SQLitePreparedStatement;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.query.SearchQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.NativeByteBuffer;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Cells.DialogCell;
+import org.atomgram.ui.Cells.GreySectionCell;
+import org.atomgram.ui.Cells.HashtagSearchCell;
+import org.atomgram.ui.Cells.HintDialogCell;
+import org.atomgram.ui.Cells.LoadingCell;
+import org.atomgram.ui.Cells.ProfileSearchCell;
+import org.atomgram.ui.Components.RecyclerListView;
 
 import java.util.ArrayList;
 import java.util.Collections;

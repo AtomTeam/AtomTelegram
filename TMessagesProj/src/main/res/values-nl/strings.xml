@@ -599,8 +599,8 @@
     <string name="Language">Taal</string>
     <string name="AskAQuestionInfo">De ondersteuning van Telegram wordt gedaan door vrijwilligers. We doen ons best om zo snel mogelijk te antwoorden.<![CDATA[<br><br>]]>Bekijk ook de <![CDATA[<a href=\"https://telegram.org/faq#general\">veelgestelde vragen</a>]]>: Hier staan de antwoorden op de meeste vragen en belangrijke tips voor <![CDATA[<a href=\"https://telegram.org/faq#troubleshooting\">het oplossen van problemen</a>]]>.</string>
     <string name="AskButton">Vraag een vrijwilliger</string>
-    <string name="TelegramFaq">Veelgestelde vragen</string>
-    <string name="TelegramFaqUrl">https://telegram.org/faq</string>
+    <string name="AtomgramFaq">Veelgestelde vragen</string>
+    <string name="AtomgramFaqUrl">https://telegram.org/faq</string>
     <string name="PrivacyPolicy">Privacybeleid</string>
     <string name="PrivacyPolicyUrl">https://telegram.org/privacy</string>
     <string name="DeleteLocalization">Vertaling verwijderen?</string>

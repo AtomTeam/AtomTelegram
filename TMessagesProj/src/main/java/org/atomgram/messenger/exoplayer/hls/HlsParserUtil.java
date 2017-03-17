@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
-import org.telegram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.ParserException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

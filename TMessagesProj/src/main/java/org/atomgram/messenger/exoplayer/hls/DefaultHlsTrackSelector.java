@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
 import android.content.Context;
 import android.text.TextUtils;
-import org.telegram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
+import org.atomgram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

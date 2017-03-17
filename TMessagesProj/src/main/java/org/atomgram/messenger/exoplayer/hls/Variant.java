@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.chunk.FormatWrapper;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.chunk.FormatWrapper;
 
 /**
  * Variant stream reference.

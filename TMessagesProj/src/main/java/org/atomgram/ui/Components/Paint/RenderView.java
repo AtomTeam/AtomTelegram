@@ -1,4 +1,4 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.content.Context;
 import android.graphics.*;
@@ -15,9 +15,9 @@ import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.egl.EGLDisplay;
 import javax.microedition.khronos.egl.EGLSurface;
 
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLog;
-import org.telegram.ui.Components.Size;
+import org.atomgram.messenger.DispatchQueue;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.ui.Components.Size;
 
 import java.util.concurrent.Semaphore;
 

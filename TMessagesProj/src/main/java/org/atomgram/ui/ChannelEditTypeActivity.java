@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -27,29 +27,29 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Cells.AdminedChannelCell;
-import org.telegram.ui.Cells.HeaderCell;
-import org.telegram.ui.Cells.LoadingCell;
-import org.telegram.ui.Cells.RadioButtonCell;
-import org.telegram.ui.Cells.ShadowSectionCell;
-import org.telegram.ui.Cells.TextBlockCell;
-import org.telegram.ui.Cells.TextInfoPrivacyCell;
-import org.telegram.ui.Components.LayoutHelper;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Cells.AdminedChannelCell;
+import org.atomgram.ui.Cells.HeaderCell;
+import org.atomgram.ui.Cells.LoadingCell;
+import org.atomgram.ui.Cells.RadioButtonCell;
+import org.atomgram.ui.Cells.ShadowSectionCell;
+import org.atomgram.ui.Cells.TextBlockCell;
+import org.atomgram.ui.Cells.TextInfoPrivacyCell;
+import org.atomgram.ui.Components.LayoutHelper;
 
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
@@ -268,7 +268,7 @@ public class ChannelEditTypeActivity extends BaseFragment implements Notificatio
         linkContainer.addView(publicContainer, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, 36, 17, 7, 17, 0));
 
         EditText editText = new EditText(context);
-        editText.setText("telegram.me/");
+        editText.setText("Atomgram.me/");
         editText.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
         editText.setHintTextColor(0xff979797);
         editText.setTextColor(0xff212121);
@@ -412,9 +412,9 @@ public class ChannelEditTypeActivity extends BaseFragment implements Notificatio
                                         AlertDialog.Builder builder = new AlertDialog.Builder(getParentActivity());
                                         builder.setTitle(LocaleController.getString("AppName", R.string.AppName));
                                         if (channel.megagroup) {
-                                            builder.setMessage(AndroidUtilities.replaceTags(LocaleController.formatString("RevokeLinkAlert", R.string.RevokeLinkAlert, "telegram.me/" + channel.username, channel.title)));
+                                            builder.setMessage(AndroidUtilities.replaceTags(LocaleController.formatString("RevokeLinkAlert", R.string.RevokeLinkAlert, "Atomgram.me/" + channel.username, channel.title)));
                                         } else {
-                                            builder.setMessage(AndroidUtilities.replaceTags(LocaleController.formatString("RevokeLinkAlertChannel", R.string.RevokeLinkAlertChannel, "telegram.me/" + channel.username, channel.title)));
+                                            builder.setMessage(AndroidUtilities.replaceTags(LocaleController.formatString("RevokeLinkAlertChannel", R.string.RevokeLinkAlertChannel, "Atomgram.me/" + channel.username, channel.title)));
                                         }
                                         builder.setNegativeButton(LocaleController.getString("Cancel", R.string.Cancel), null);
                                         builder.setPositiveButton(LocaleController.getString("RevokeButton", R.string.RevokeButton), new DialogInterface.OnClickListener() {

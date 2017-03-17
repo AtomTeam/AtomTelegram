@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.subrip;
+package org.atomgram.messenger.exoplayer.text.subrip;
 
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.text.Subtitle;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.text.Subtitle;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.util.Collections;
 import java.util.List;
 

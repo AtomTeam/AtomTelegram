@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,22 +17,22 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Surface;
 
-import org.telegram.messenger.exoplayer.DummyTrackRenderer;
-import org.telegram.messenger.exoplayer.ExoPlaybackException;
-import org.telegram.messenger.exoplayer.ExoPlayer;
-import org.telegram.messenger.exoplayer.MediaCodecAudioTrackRenderer;
-import org.telegram.messenger.exoplayer.MediaCodecSelector;
-import org.telegram.messenger.exoplayer.MediaCodecTrackRenderer;
-import org.telegram.messenger.exoplayer.MediaCodecVideoTrackRenderer;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.TrackRenderer;
-import org.telegram.messenger.exoplayer.audio.AudioCapabilities;
-import org.telegram.messenger.exoplayer.extractor.ExtractorSampleSource;
-import org.telegram.messenger.exoplayer.upstream.Allocator;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DefaultAllocator;
-import org.telegram.messenger.exoplayer.upstream.DefaultUriDataSource;
-import org.telegram.messenger.exoplayer.util.PlayerControl;
+import org.atomgram.messenger.exoplayer.DummyTrackRenderer;
+import org.atomgram.messenger.exoplayer.ExoPlaybackException;
+import org.atomgram.messenger.exoplayer.ExoPlayer;
+import org.atomgram.messenger.exoplayer.MediaCodecAudioTrackRenderer;
+import org.atomgram.messenger.exoplayer.MediaCodecSelector;
+import org.atomgram.messenger.exoplayer.MediaCodecTrackRenderer;
+import org.atomgram.messenger.exoplayer.MediaCodecVideoTrackRenderer;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.TrackRenderer;
+import org.atomgram.messenger.exoplayer.audio.AudioCapabilities;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorSampleSource;
+import org.atomgram.messenger.exoplayer.upstream.Allocator;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DefaultAllocator;
+import org.atomgram.messenger.exoplayer.upstream.DefaultUriDataSource;
+import org.atomgram.messenger.exoplayer.util.PlayerControl;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 

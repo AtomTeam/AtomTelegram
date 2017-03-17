@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -20,18 +20,18 @@ import android.text.style.URLSpan;
 import android.view.MotionEvent;
 import android.view.SoundEffectConstants;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.PhotoViewer;
-import org.telegram.ui.Components.AvatarDrawable;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.ImageReceiver;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.PhotoViewer;
+import org.atomgram.ui.Components.AvatarDrawable;
 
 public class ChatActionCell extends BaseCell {
 

@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 1.3.x.
+ * This is the source code of Atomgram for Android v. 1.3.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -18,9 +18,9 @@ import android.content.res.Configuration;
 import android.text.format.DateFormat;
 import android.util.Xml;
 
-import org.telegram.messenger.time.FastDateFormat;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
+import org.atomgram.messenger.time.FastDateFormat;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
 import org.xmlpull.v1.XmlPullParser;
 
 import java.io.File;
@@ -160,6 +160,23 @@ public class LocaleController {
         localeInfo.pathToFile = null;
         sortedLanguages.add(localeInfo);
         languagesDict.put(localeInfo.shortName, localeInfo);
+
+        localeInfo = new LocaleInfo();
+        localeInfo.name = "Русский";
+        localeInfo.nameEnglish = "Russian";
+        localeInfo.shortName = "ru";
+        localeInfo.pathToFile = null;
+        sortedLanguages.add(localeInfo);
+        languagesDict.put(localeInfo.shortName, localeInfo);
+
+        localeInfo = new LocaleInfo();
+        localeInfo.name = "Татарча";
+        localeInfo.nameEnglish = "Tatar";
+        localeInfo.shortName = "tt";
+        localeInfo.pathToFile = null;
+        sortedLanguages.add(localeInfo);
+        languagesDict.put(localeInfo.shortName, localeInfo);
+
 
         localeInfo = new LocaleInfo();
         localeInfo.name = "Italiano";

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -24,12 +24,12 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.view.Surface;
 import android.view.TextureView;
-import org.telegram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
-import org.telegram.messenger.exoplayer.drm.DrmSessionManager;
-import org.telegram.messenger.exoplayer.drm.FrameworkMediaCrypto;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.TraceUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
+import org.atomgram.messenger.exoplayer.drm.DrmSessionManager;
+import org.atomgram.messenger.exoplayer.drm.FrameworkMediaCrypto;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.TraceUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.nio.ByteBuffer;
 
 /**

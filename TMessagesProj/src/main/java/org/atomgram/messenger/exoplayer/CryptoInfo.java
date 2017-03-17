@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.annotation.TargetApi;
 import android.media.MediaExtractor;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.util.Util;
 
 /**
  * Compatibility wrapper around {@link android.media.MediaCodec.CryptoInfo}.

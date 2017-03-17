@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
-import static org.telegram.messenger.support.widget.RecyclerView.NO_POSITION;
+import static org.atomgram.messenger.support.widget.RecyclerView.NO_POSITION;
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -25,8 +25,8 @@ import android.os.Parcelable;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.accessibility.AccessibilityEventCompat;
 import android.support.v4.view.accessibility.AccessibilityRecordCompat;
-import org.telegram.messenger.support.widget.RecyclerView.LayoutParams;
-import org.telegram.messenger.support.widget.helper.ItemTouchHelper;
+import org.atomgram.messenger.support.widget.RecyclerView.LayoutParams;
+import org.atomgram.messenger.support.widget.helper.ItemTouchHelper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;

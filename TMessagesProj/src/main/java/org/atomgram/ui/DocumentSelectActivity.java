@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -29,20 +29,20 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.ui.ActionBar.BackDrawable;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Adapters.BaseFragmentAdapter;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Cells.SharedDocumentCell;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.NumberTextView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.ActionBar.BackDrawable;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Adapters.BaseFragmentAdapter;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Cells.SharedDocumentCell;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.NumberTextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -589,13 +589,13 @@ public class DocumentSelectActivity extends BaseFragment {
         items.add(fs);
 
         try {
-            File telegramPath = new File(Environment.getExternalStorageDirectory(), "Telegram");
-            if (telegramPath.exists()) {
+            File AtomgramPath = new File(Environment.getExternalStorageDirectory(), "Atomgram");
+            if (AtomgramPath.exists()) {
                 fs = new ListItem();
-                fs.title = "Telegram";
-                fs.subtitle = telegramPath.toString();
+                fs.title = "Atomgram";
+                fs.subtitle = AtomgramPath.toString();
                 fs.icon = R.drawable.ic_directory;
-                fs.file = telegramPath;
+                fs.file = AtomgramPath;
                 items.add(fs);
             }
         } catch (Exception e) {

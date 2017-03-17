@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -50,52 +50,52 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.SerializedData;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.MessageObject;
-import org.telegram.ui.ActionBar.BottomSheet;
-import org.telegram.ui.Cells.CheckBoxCell;
-import org.telegram.ui.Cells.TextInfoCell;
-import org.telegram.ui.Cells.EmptyCell;
-import org.telegram.ui.Cells.HeaderCell;
-import org.telegram.ui.Cells.ShadowSectionCell;
-import org.telegram.ui.Cells.TextCheckCell;
-import org.telegram.ui.Cells.TextDetailSettingsCell;
-import org.telegram.ui.Cells.TextSettingsCell;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.Components.AvatarDrawable;
-import org.telegram.ui.Components.AvatarUpdater;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.NumberPicker;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Components.RecyclerListView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.BuildVars;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.SerializedData;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.ui.ActionBar.BottomSheet;
+import org.atomgram.ui.Cells.CheckBoxCell;
+import org.atomgram.ui.Cells.TextInfoCell;
+import org.atomgram.ui.Cells.EmptyCell;
+import org.atomgram.ui.Cells.HeaderCell;
+import org.atomgram.ui.Cells.ShadowSectionCell;
+import org.atomgram.ui.Cells.TextCheckCell;
+import org.atomgram.ui.Cells.TextDetailSettingsCell;
+import org.atomgram.ui.Cells.TextSettingsCell;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.Components.AvatarDrawable;
+import org.atomgram.ui.Components.AvatarUpdater;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.NumberPicker;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Components.RecyclerListView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -148,7 +148,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
     private int supportSectionRow;
     private int supportSectionRow2;
     private int askQuestionRow;
-    private int telegramFaqRow;
+    private int AtomgramFaqRow;
     private int privacyPolicyRow;
     private int sendLogsRow;
     private int clearLogsRow;
@@ -267,7 +267,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         supportSectionRow = rowCount++;
         supportSectionRow2 = rowCount++;
         askQuestionRow = rowCount++;
-        telegramFaqRow = rowCount++;
+        AtomgramFaqRow = rowCount++;
         privacyPolicyRow = rowCount++;
         if (BuildVars.DEBUG_VERSION) {
             sendLogsRow = rowCount++;
@@ -494,8 +494,8 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                     });
                     builder.setNegativeButton(LocaleController.getString("Cancel", R.string.Cancel), null);
                     showDialog(builder.create());
-                } else if (position == telegramFaqRow) {
-                    Browser.openUrl(getParentActivity(), LocaleController.getString("TelegramFaqUrl", R.string.TelegramFaqUrl));
+                } else if (position == AtomgramFaqRow) {
+                    Browser.openUrl(getParentActivity(), LocaleController.getString("AtomgramFaqUrl", R.string.AtomgramFaq));
                 } else if (position == privacyPolicyRow) {
                     Browser.openUrl(getParentActivity(), LocaleController.getString("PrivacyPolicyUrl", R.string.PrivacyPolicyUrl));
                 } else if (position == contactsReimportRow) {
@@ -1303,8 +1303,8 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                         textCell.setText(LocaleController.getString("PrivacySettings", R.string.PrivacySettings), true);
                     } else if (position == switchBackendButtonRow) {
                         textCell.setText("Switch Backend", true);
-                    } else if (position == telegramFaqRow) {
-                        textCell.setText(LocaleController.getString("TelegramFAQ", R.string.TelegramFaq), true);
+                    } else if (position == AtomgramFaqRow) {
+                        textCell.setText(LocaleController.getString("AtomgramFAQ", R.string.AtomgramFaq), true);
                     } else if (position == contactsReimportRow) {
                         textCell.setText(LocaleController.getString("ImportContacts", R.string.ImportContacts), true);
                     } else if (position == stickersRow) {
@@ -1437,7 +1437,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 if (position == textSizeRow || position == enableAnimationsRow || position == notificationRow || position == backgroundRow || position == numberRow ||
                         position == askQuestionRow || position == sendLogsRow || position == sendByEnterRow || position == autoplayGifsRow || position == privacyRow || position == wifiDownloadRow ||
                         position == mobileDownloadRow || position == clearLogsRow || position == roamingDownloadRow || position == languageRow || position == usernameRow ||
-                        position == switchBackendButtonRow || position == telegramFaqRow || position == contactsSortRow || position == contactsReimportRow || position == saveToGalleryRow ||
+                        position == switchBackendButtonRow || position == AtomgramFaqRow || position == contactsSortRow || position == contactsReimportRow || position == saveToGalleryRow ||
                         position == stickersRow || position == cacheRow || position == raiseToSpeakRow || position == privacyPolicyRow || position == customTabsRow || position == directShareRow || position == versionRow ||
                         position == emojiRow) {
                     if (holder.itemView.getBackground() == null) {
@@ -1520,7 +1520,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                                 abi = "universal";
                                 break;
                         }
-                        ((TextInfoCell) view).setText(String.format(Locale.US, "Telegram for Android v%s (%d) %s", pInfo.versionName, code, abi));
+                        ((TextInfoCell) view).setText(String.format(Locale.US, "Atomgram for Android v%s (%d) %s", pInfo.versionName, code, abi));
                     } catch (Exception e) {
                         FileLog.e("tmessages", e);
                     }
@@ -1552,7 +1552,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 return 1;
             } else if (position == enableAnimationsRow || position == sendByEnterRow || position == saveToGalleryRow || position == autoplayGifsRow || position == raiseToSpeakRow || position == customTabsRow || position == directShareRow) {
                 return 3;
-            } else if (position == notificationRow || position == backgroundRow || position == askQuestionRow || position == sendLogsRow || position == privacyRow || position == clearLogsRow || position == switchBackendButtonRow || position == telegramFaqRow || position == contactsReimportRow || position == textSizeRow || position == languageRow || position == contactsSortRow || position == stickersRow || position == cacheRow || position == privacyPolicyRow || position == emojiRow) {
+            } else if (position == notificationRow || position == backgroundRow || position == askQuestionRow || position == sendLogsRow || position == privacyRow || position == clearLogsRow || position == switchBackendButtonRow || position == AtomgramFaqRow || position == contactsReimportRow || position == textSizeRow || position == languageRow || position == contactsSortRow || position == stickersRow || position == cacheRow || position == privacyPolicyRow || position == emojiRow) {
                 return 2;
             } else if (position == versionRow) {
                 return 5;

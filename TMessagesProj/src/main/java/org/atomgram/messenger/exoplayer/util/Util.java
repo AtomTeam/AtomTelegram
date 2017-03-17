@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -23,10 +23,10 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Build;
 import android.text.TextUtils;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.ExoPlayerLibraryInfo;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.ExoPlayerLibraryInfo;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;

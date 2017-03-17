@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.metadata;
+package org.atomgram.messenger.exoplayer.metadata;
 
-import org.telegram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.ParserException;
 
 /**
  * Parses metadata from binary data.

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.annotation.TargetApi;
 import android.media.AudioManager;
@@ -22,11 +22,11 @@ import android.media.PlaybackParams;
 import android.media.audiofx.Virtualizer;
 import android.os.Handler;
 import android.os.SystemClock;
-import org.telegram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
-import org.telegram.messenger.exoplayer.audio.AudioCapabilities;
-import org.telegram.messenger.exoplayer.audio.AudioTrack;
-import org.telegram.messenger.exoplayer.drm.DrmSessionManager;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
+import org.atomgram.messenger.exoplayer.audio.AudioCapabilities;
+import org.atomgram.messenger.exoplayer.audio.AudioTrack;
+import org.atomgram.messenger.exoplayer.drm.DrmSessionManager;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
 import java.nio.ByteBuffer;
 
 /**

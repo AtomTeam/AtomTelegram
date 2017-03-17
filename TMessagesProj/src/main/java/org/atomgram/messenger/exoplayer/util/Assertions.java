@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
 import android.os.Looper;
 import android.text.TextUtils;
-import org.telegram.messenger.exoplayer.ExoPlayerLibraryInfo;
+import org.atomgram.messenger.exoplayer.ExoPlayerLibraryInfo;
 
 /**
  * Provides methods for asserting the truth of expressions and properties.

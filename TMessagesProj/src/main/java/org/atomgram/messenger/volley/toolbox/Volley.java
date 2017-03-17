@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley.toolbox;
+package org.atomgram.messenger.volley.toolbox;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -22,8 +22,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.http.AndroidHttpClient;
 import android.os.Build;
 
-import org.telegram.messenger.volley.Network;
-import org.telegram.messenger.volley.RequestQueue;
+import org.atomgram.messenger.volley.Network;
+import org.atomgram.messenger.volley.RequestQueue;
 
 import java.io.File;
 

@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.chunk;
+package org.atomgram.messenger.exoplayer.chunk;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 
 /**

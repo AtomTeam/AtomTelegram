@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x
+ * This is the source code of Atomgram for Android v. 3.x.x
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -31,17 +31,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Cells.PhotoEditToolCell;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.messenger.DispatchQueue;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Cells.PhotoEditToolCell;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

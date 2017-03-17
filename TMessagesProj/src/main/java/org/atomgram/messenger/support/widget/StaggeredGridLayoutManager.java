@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
-import static org.telegram.messenger.support.widget.LayoutState.ITEM_DIRECTION_HEAD;
-import static org.telegram.messenger.support.widget.LayoutState.ITEM_DIRECTION_TAIL;
-import static org.telegram.messenger.support.widget.LayoutState.LAYOUT_END;
-import static org.telegram.messenger.support.widget.LayoutState.LAYOUT_START;
-import static org.telegram.messenger.support.widget.RecyclerView.NO_POSITION;
+import static org.atomgram.messenger.support.widget.LayoutState.ITEM_DIRECTION_HEAD;
+import static org.atomgram.messenger.support.widget.LayoutState.ITEM_DIRECTION_TAIL;
+import static org.atomgram.messenger.support.widget.LayoutState.LAYOUT_END;
+import static org.atomgram.messenger.support.widget.LayoutState.LAYOUT_START;
+import static org.atomgram.messenger.support.widget.RecyclerView.NO_POSITION;
 
 import android.content.Context;
 import android.graphics.PointF;

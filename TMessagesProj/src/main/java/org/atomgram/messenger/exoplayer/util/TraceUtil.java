@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
 import android.annotation.TargetApi;
-import org.telegram.messenger.exoplayer.ExoPlayerLibraryInfo;
+import org.atomgram.messenger.exoplayer.ExoPlayerLibraryInfo;
 
 /**
  * Calls through to {@link android.os.Trace} methods on supported API levels.

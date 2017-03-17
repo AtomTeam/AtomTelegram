@@ -599,8 +599,8 @@
     <string name="Language">Idioma</string>
     <string name="AskAQuestionInfo">Por favor, considera que el soporte de Telegram está hecho por voluntarios. Respondemos lo antes posible, pero puede tomar tiempo.<![CDATA[<br><br>]]>Por favor, mira las <![CDATA[<a href=\"https://telegram.org/faq/es\">preguntas frecuentes de Telegram</a>]]>: tienen respuestas para la mayoría de las preguntas y <![CDATA[<a href=\"https://telegram.org/faq/es#solucin-de-problemas\">soluciones a problemas</a>]]>.</string>
     <string name="AskButton">Preguntar</string>
-    <string name="TelegramFaq">Preguntas frecuentes</string>
-    <string name="TelegramFaqUrl">https://telegram.org/faq/es</string>
+    <string name="AtomgramFaq">Preguntas frecuentes</string>
+    <string name="AtomgramFaqUrl">https://telegram.org/faq/es</string>
     <string name="PrivacyPolicy">Política de privacidad</string>
     <string name="PrivacyPolicyUrl">https://telegram.org/privacy</string>
     <string name="DeleteLocalization">¿Eliminar traducción?</string>

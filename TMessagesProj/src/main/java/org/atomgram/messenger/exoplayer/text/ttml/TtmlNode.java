@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.ttml;
+package org.atomgram.messenger.exoplayer.text.ttml;
 
 import android.text.SpannableStringBuilder;
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

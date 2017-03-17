@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash.mpd;
+package org.atomgram.messenger.exoplayer.dash.mpd;
 
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentList;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentTemplate;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentTimelineElement;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.SingleSegmentBase;
-import org.telegram.messenger.exoplayer.drm.DrmInitData.SchemeInitData;
-import org.telegram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
-import org.telegram.messenger.exoplayer.upstream.UriLoadable;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.ParserUtil;
-import org.telegram.messenger.exoplayer.util.UriUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentList;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentTemplate;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.SegmentTimelineElement;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.SingleSegmentBase;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData.SchemeInitData;
+import org.atomgram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
+import org.atomgram.messenger.exoplayer.upstream.UriLoadable;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.ParserUtil;
+import org.atomgram.messenger.exoplayer.util.UriUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;

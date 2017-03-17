@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x
+ * This is the source code of Atomgram for Android v. 3.x.x
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -16,8 +16,8 @@ import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.LocaleController;
-import org.telegram.ui.Components.LayoutHelper;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.ui.Components.LayoutHelper;
 
 public class TextBlockCell extends FrameLayout {
 

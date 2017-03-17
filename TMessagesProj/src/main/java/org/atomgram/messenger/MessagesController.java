@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -20,22 +20,22 @@ import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.widget.Toast;
 
-import org.telegram.SQLite.SQLiteCursor;
-import org.telegram.messenger.query.BotQuery;
-import org.telegram.messenger.query.DraftQuery;
-import org.telegram.messenger.query.MessagesQuery;
-import org.telegram.messenger.query.SearchQuery;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.NativeByteBuffer;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.SerializedData;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ChatActivity;
-import org.telegram.ui.Components.AlertsCreator;
-import org.telegram.ui.ProfileActivity;
+import org.atomgram.SQLite.SQLiteCursor;
+import org.atomgram.messenger.query.BotQuery;
+import org.atomgram.messenger.query.DraftQuery;
+import org.atomgram.messenger.query.MessagesQuery;
+import org.atomgram.messenger.query.SearchQuery;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.NativeByteBuffer;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.SerializedData;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.Components.AlertsCreator;
+import org.atomgram.ui.ProfileActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -346,7 +346,7 @@ public class MessagesController implements NotificationCenter.NotificationCenter
         TLRPC.TL_userForeign_old2 user = new TLRPC.TL_userForeign_old2();
         user.phone = "333";
         user.id = 333000;
-        user.first_name = "Telegram";
+        user.first_name = "Atomgram";
         user.last_name = "";
         user.status = null;
         user.photo = new TLRPC.TL_userProfilePhotoEmpty();
@@ -355,7 +355,7 @@ public class MessagesController implements NotificationCenter.NotificationCenter
         user = new TLRPC.TL_userForeign_old2();
         user.phone = "42777";
         user.id = 777000;
-        user.first_name = "Telegram";
+        user.first_name = "Atomgram";
         user.last_name = "Notifications";
         user.status = null;
         user.photo = new TLRPC.TL_userProfilePhotoEmpty();

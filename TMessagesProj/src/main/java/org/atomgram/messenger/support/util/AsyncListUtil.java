@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.util;
+package org.atomgram.messenger.support.util;
 
 import android.support.annotation.UiThread;
 import android.support.annotation.WorkerThread;

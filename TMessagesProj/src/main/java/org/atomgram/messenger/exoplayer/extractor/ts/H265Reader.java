@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.ts;
+package org.atomgram.messenger.exoplayer.extractor.ts;
 
 import android.util.Log;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.extractor.TrackOutput;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.NalUnitUtil;
-import org.telegram.messenger.exoplayer.util.ParsableBitArray;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.extractor.TrackOutput;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.NalUnitUtil;
+import org.atomgram.messenger.exoplayer.util.ParsableBitArray;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 import java.util.Collections;
 
 /**

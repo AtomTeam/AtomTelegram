@@ -1,33 +1,33 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.content.Context;
 import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.Components.AvatarDrawable;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.Components.CheckBox;
-import org.telegram.ui.Components.CheckBoxSquare;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.ActionBar.SimpleTextView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.Components.AvatarDrawable;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.Components.CheckBox;
+import org.atomgram.ui.Components.CheckBoxSquare;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.ActionBar.SimpleTextView;
 
 public class UserCell extends FrameLayout {
 

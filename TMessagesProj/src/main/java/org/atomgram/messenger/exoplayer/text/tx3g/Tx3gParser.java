@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.tx3g;
+package org.atomgram.messenger.exoplayer.text.tx3g;
 
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.text.Subtitle;
-import org.telegram.messenger.exoplayer.text.SubtitleParser;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.text.Subtitle;
+import org.atomgram.messenger.exoplayer.text.SubtitleParser;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 
 /**
  * A {@link SubtitleParser} for tx3g.

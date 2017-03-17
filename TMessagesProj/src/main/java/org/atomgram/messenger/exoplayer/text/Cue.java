@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text;
+package org.atomgram.messenger.exoplayer.text;
 
 import android.text.Layout.Alignment;
 

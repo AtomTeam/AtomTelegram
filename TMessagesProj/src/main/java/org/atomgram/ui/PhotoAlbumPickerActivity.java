@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 2.0.x.
+ * This is the source code of Atomgram for Android v. 2.0.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,24 +26,24 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Adapters.BaseFragmentAdapter;
-import org.telegram.ui.Cells.PhotoPickerAlbumsCell;
-import org.telegram.ui.Cells.PhotoPickerSearchCell;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.PickerBottomLayout;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Adapters.BaseFragmentAdapter;
+import org.atomgram.ui.Cells.PhotoPickerAlbumsCell;
+import org.atomgram.ui.Cells.PhotoPickerSearchCell;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.PickerBottomLayout;
 
 import java.util.ArrayList;
 import java.util.HashMap;

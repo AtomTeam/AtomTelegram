@@ -1,4 +1,4 @@
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.Activity;
 import android.net.Uri;

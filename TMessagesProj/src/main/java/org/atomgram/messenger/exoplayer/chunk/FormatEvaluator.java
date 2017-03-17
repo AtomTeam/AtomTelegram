@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.chunk;
+package org.atomgram.messenger.exoplayer.chunk;
 
-import org.telegram.messenger.exoplayer.upstream.BandwidthMeter;
+import org.atomgram.messenger.exoplayer.upstream.BandwidthMeter;
 import java.util.List;
 import java.util.Random;
 

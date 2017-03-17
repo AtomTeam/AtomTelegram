@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.webvtt;
+package org.atomgram.messenger.exoplayer.text.webvtt;
 
 import android.graphics.Typeface;
 import android.text.Layout.Alignment;
@@ -22,8 +22,8 @@ import android.text.Spanned;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

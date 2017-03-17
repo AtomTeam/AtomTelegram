@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -24,16 +24,16 @@ import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import org.telegram.messenger.audioinfo.AudioInfo;
-import org.telegram.ui.LaunchActivity;
+import org.atomgram.messenger.audioinfo.AudioInfo;
+import org.atomgram.ui.LaunchActivity;
 
 public class MusicPlayerService extends Service implements NotificationCenter.NotificationCenterDelegate {
 
-    public static final String NOTIFY_PREVIOUS = "org.telegram.android.musicplayer.previous";
-    public static final String NOTIFY_CLOSE = "org.telegram.android.musicplayer.close";
-    public static final String NOTIFY_PAUSE = "org.telegram.android.musicplayer.pause";
-    public static final String NOTIFY_PLAY = "org.telegram.android.musicplayer.play";
-    public static final String NOTIFY_NEXT = "org.telegram.android.musicplayer.next";
+    public static final String NOTIFY_PREVIOUS = "org.atomgram.android.musicplayer.previous";
+    public static final String NOTIFY_CLOSE = "org.atomgram.android.musicplayer.close";
+    public static final String NOTIFY_PAUSE = "org.atomgram.android.musicplayer.pause";
+    public static final String NOTIFY_PLAY = "org.atomgram.android.musicplayer.play";
+    public static final String NOTIFY_NEXT = "org.atomgram.android.musicplayer.next";
 
     private RemoteControlClient remoteControlClient;
     private AudioManager audioManager;

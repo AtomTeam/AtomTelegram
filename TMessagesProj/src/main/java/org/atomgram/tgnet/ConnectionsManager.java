@@ -1,4 +1,4 @@
-package org.telegram.tgnet;
+package org.atomgram.tgnet;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -10,15 +10,15 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.PowerManager;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.BuildVars;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.messenger.Utilities;
 
 import java.net.Inet4Address;
 import java.net.Inet6Address;

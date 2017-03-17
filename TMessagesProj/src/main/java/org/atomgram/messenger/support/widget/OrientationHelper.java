@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.view.View;
 import android.widget.LinearLayout;

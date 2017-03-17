@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.hls.HlsMediaPlaylist.Segment;
-import org.telegram.messenger.exoplayer.upstream.UriLoadable;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.hls.HlsMediaPlaylist.Segment;
+import org.atomgram.messenger.exoplayer.upstream.UriLoadable;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

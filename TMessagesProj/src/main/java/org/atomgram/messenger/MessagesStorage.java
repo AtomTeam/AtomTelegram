@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,17 +14,17 @@ import android.text.TextUtils;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.SQLite.SQLiteCursor;
-import org.telegram.SQLite.SQLiteDatabase;
-import org.telegram.SQLite.SQLitePreparedStatement;
-import org.telegram.messenger.query.BotQuery;
-import org.telegram.messenger.query.MessagesQuery;
-import org.telegram.messenger.query.SharedMediaQuery;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.NativeByteBuffer;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.SQLite.SQLiteCursor;
+import org.atomgram.SQLite.SQLiteDatabase;
+import org.atomgram.SQLite.SQLitePreparedStatement;
+import org.atomgram.messenger.query.BotQuery;
+import org.atomgram.messenger.query.MessagesQuery;
+import org.atomgram.messenger.query.SharedMediaQuery;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.NativeByteBuffer;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
 
 import java.io.File;
 import java.util.ArrayList;

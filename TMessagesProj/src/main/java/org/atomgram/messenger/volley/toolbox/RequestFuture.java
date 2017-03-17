@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley.toolbox;
+package org.atomgram.messenger.volley.toolbox;
 
-import org.telegram.messenger.volley.Request;
-import org.telegram.messenger.volley.Response;
-import org.telegram.messenger.volley.VolleyError;
+import org.atomgram.messenger.volley.Request;
+import org.atomgram.messenger.volley.Response;
+import org.atomgram.messenger.volley.VolleyError;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

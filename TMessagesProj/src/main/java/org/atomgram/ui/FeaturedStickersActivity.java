@@ -1,32 +1,32 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Cells.FeaturedStickerSetCell;
-import org.telegram.ui.Cells.TextInfoPrivacyCell;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.RecyclerListView;
-import org.telegram.ui.Components.StickersAlert;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Cells.FeaturedStickerSetCell;
+import org.atomgram.ui.Cells.TextInfoPrivacyCell;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.RecyclerListView;
+import org.atomgram.ui.Components.StickersAlert;
 
 import java.util.ArrayList;
 import java.util.HashMap;

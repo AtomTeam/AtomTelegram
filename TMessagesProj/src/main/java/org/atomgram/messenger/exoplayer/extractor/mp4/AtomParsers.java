@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.mp4;
+package org.atomgram.messenger.exoplayer.extractor.mp4;
 
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.extractor.GaplessInfo;
-import org.telegram.messenger.exoplayer.util.Ac3Util;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.CodecSpecificDataUtil;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.NalUnitUtil;
-import org.telegram.messenger.exoplayer.util.ParsableBitArray;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.extractor.GaplessInfo;
+import org.atomgram.messenger.exoplayer.util.Ac3Util;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.CodecSpecificDataUtil;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.NalUnitUtil;
+import org.atomgram.messenger.exoplayer.util.ParsableBitArray;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

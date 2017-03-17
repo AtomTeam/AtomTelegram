@@ -13,24 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.eia608;
+package org.atomgram.messenger.exoplayer.text.eia608;
 
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Looper;
 import android.os.Message;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.ExoPlaybackException;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.MediaFormatHolder;
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.SampleSource;
-import org.telegram.messenger.exoplayer.SampleSourceTrackRenderer;
-import org.telegram.messenger.exoplayer.TrackRenderer;
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.text.TextRenderer;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.ExoPlaybackException;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.MediaFormatHolder;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.SampleSource;
+import org.atomgram.messenger.exoplayer.SampleSourceTrackRenderer;
+import org.atomgram.messenger.exoplayer.TrackRenderer;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.text.TextRenderer;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.util.Collections;
 import java.util.TreeSet;
 

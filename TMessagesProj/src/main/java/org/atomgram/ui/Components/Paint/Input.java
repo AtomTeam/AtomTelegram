@@ -1,9 +1,9 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.Matrix;
 import android.view.MotionEvent;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AndroidUtilities;
 
 import java.util.Vector;
 

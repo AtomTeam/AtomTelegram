@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
-import org.telegram.messenger.exoplayer.extractor.SeekMap;
+import org.atomgram.messenger.exoplayer.extractor.SeekMap;
 
 /**
  * FLAC seek table class

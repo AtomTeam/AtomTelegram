@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor;
+package org.atomgram.messenger.exoplayer.extractor;
 
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.util.Util;
 
 /**
  * Defines chunks of samples within a media stream.

@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.ttml;
+package org.atomgram.messenger.exoplayer.text.ttml;
 
 import android.text.Layout;
 import android.util.Log;
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.text.Cue;
-import org.telegram.messenger.exoplayer.text.SubtitleParser;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.ParserUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.text.SubtitleParser;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.ParserUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.HashMap;

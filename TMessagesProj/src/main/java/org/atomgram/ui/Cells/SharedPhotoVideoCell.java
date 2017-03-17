@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 2.0.x.
+ * This is the source code of Atomgram for Android v. 2.0.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -22,17 +22,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.R;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.Components.CheckBox;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.PhotoViewer;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.R;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.Components.CheckBox;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.PhotoViewer;
 
 public class SharedPhotoVideoCell extends FrameLayout {
 

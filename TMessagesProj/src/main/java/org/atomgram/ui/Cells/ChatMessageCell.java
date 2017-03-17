@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -31,43 +31,43 @@ import android.view.MotionEvent;
 import android.view.SoundEffectConstants;
 import android.view.ViewStructure;
 
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Components.AvatarDrawable;
-import org.telegram.ui.Components.LinkPath;
-import org.telegram.ui.Components.RadialProgress;
-import org.telegram.ui.Components.SeekBar;
-import org.telegram.ui.Components.SeekBarWaveform;
-import org.telegram.ui.Components.StaticLayoutEx;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Components.TypefaceSpan;
-import org.telegram.ui.Components.URLSpanBotCommand;
-import org.telegram.ui.Components.URLSpanNoUnderline;
-import org.telegram.ui.PhotoViewer;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.Emoji;
+import org.atomgram.messenger.ImageLoader;
+import org.atomgram.messenger.ImageReceiver;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.SendMessagesHelper;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Components.AvatarDrawable;
+import org.atomgram.ui.Components.LinkPath;
+import org.atomgram.ui.Components.RadialProgress;
+import org.atomgram.ui.Components.SeekBar;
+import org.atomgram.ui.Components.SeekBarWaveform;
+import org.atomgram.ui.Components.StaticLayoutEx;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Components.TypefaceSpan;
+import org.atomgram.ui.Components.URLSpanBotCommand;
+import org.atomgram.ui.Components.URLSpanNoUnderline;
+import org.atomgram.ui.PhotoViewer;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
-import static org.telegram.messenger.AndroidUtilities.*;
+import static org.atomgram.messenger.AndroidUtilities.*;
 
 public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate, ImageReceiver.ImageReceiverDelegate, MediaController.FileDownloadProgressListener {
 

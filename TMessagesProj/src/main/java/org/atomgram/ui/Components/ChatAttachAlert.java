@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -46,29 +46,29 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.camera.*;
-import org.telegram.messenger.query.SearchQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.R;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.BottomSheet;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Cells.PhotoAttachCameraCell;
-import org.telegram.ui.Cells.PhotoAttachPhotoCell;
-import org.telegram.ui.Cells.ShadowSectionCell;
-import org.telegram.ui.ChatActivity;
-import org.telegram.ui.PhotoViewer;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.camera.*;
+import org.atomgram.messenger.query.SearchQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.BottomSheet;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Cells.PhotoAttachCameraCell;
+import org.atomgram.ui.Cells.PhotoAttachPhotoCell;
+import org.atomgram.ui.Cells.ShadowSectionCell;
+import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.PhotoViewer;
 
 import java.io.File;
 import java.util.ArrayList;

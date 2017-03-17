@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.mp3;
+package org.atomgram.messenger.exoplayer.extractor.mp3;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.util.MpegAudioHeader;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.util.MpegAudioHeader;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.util.Util;
 
 /**
  * MP3 seeker that uses metadata from a VBRI header.

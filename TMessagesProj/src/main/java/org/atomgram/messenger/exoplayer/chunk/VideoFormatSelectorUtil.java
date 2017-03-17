@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.chunk;
+package org.atomgram.messenger.exoplayer.chunk;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -22,10 +22,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
-import org.telegram.messenger.exoplayer.MediaCodecUtil;
-import org.telegram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;

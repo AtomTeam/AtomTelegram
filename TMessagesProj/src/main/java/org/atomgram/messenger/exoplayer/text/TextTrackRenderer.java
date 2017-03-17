@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text;
+package org.atomgram.messenger.exoplayer.text;
 
 import android.annotation.TargetApi;
 import android.os.Handler;
@@ -21,14 +21,14 @@ import android.os.Handler.Callback;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-import org.telegram.messenger.exoplayer.ExoPlaybackException;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.MediaFormatHolder;
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.SampleSource;
-import org.telegram.messenger.exoplayer.SampleSourceTrackRenderer;
-import org.telegram.messenger.exoplayer.TrackRenderer;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.ExoPlaybackException;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.MediaFormatHolder;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.SampleSource;
+import org.atomgram.messenger.exoplayer.SampleSourceTrackRenderer;
+import org.atomgram.messenger.exoplayer.TrackRenderer;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,13 +43,13 @@ import java.util.List;
  * detected automatically for the following supported formats:
  *
  * <ul>
- * <li>WebVTT ({@link org.telegram.messenger.exoplayer.text.webvtt.WebvttParser})</li>
+ * <li>WebVTT ({@link org.atomgram.messenger.exoplayer.text.webvtt.WebvttParser})</li>
  * <li>TTML
- * ({@link org.telegram.messenger.exoplayer.text.ttml.TtmlParser})</li>
+ * ({@link org.atomgram.messenger.exoplayer.text.ttml.TtmlParser})</li>
  * <li>SubRip
- * ({@link org.telegram.messenger.exoplayer.text.subrip.SubripParser})</li>
+ * ({@link org.atomgram.messenger.exoplayer.text.subrip.SubripParser})</li>
  * <li>TX3G
- * ({@link org.telegram.messenger.exoplayer.text.tx3g.Tx3gParser})</li>
+ * ({@link org.atomgram.messenger.exoplayer.text.tx3g.Tx3gParser})</li>
  * </ul>
  *
  * <p>To override the default parsers, pass one or more {@link SubtitleParser} instances to the
@@ -73,35 +73,35 @@ public final class TextTrackRenderer extends SampleSourceTrackRenderer implement
     // can detect the use of reflection (see http://proguard.sourceforge.net/FAQ.html#forname).
     try {
       DEFAULT_PARSER_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.text.webvtt.WebvttParser")
+          Class.forName("org.atomgram.messenger.exoplayer.text.webvtt.WebvttParser")
               .asSubclass(SubtitleParser.class));
     } catch (ClassNotFoundException e) {
       // Parser not found.
     }
     try {
       DEFAULT_PARSER_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.text.ttml.TtmlParser")
+          Class.forName("org.atomgram.messenger.exoplayer.text.ttml.TtmlParser")
               .asSubclass(SubtitleParser.class));
     } catch (ClassNotFoundException e) {
       // Parser not found.
     }
     try {
       DEFAULT_PARSER_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.text.webvtt.Mp4WebvttParser")
+          Class.forName("org.atomgram.messenger.exoplayer.text.webvtt.Mp4WebvttParser")
               .asSubclass(SubtitleParser.class));
     } catch (ClassNotFoundException e) {
       // Parser not found.
     }
     try {
       DEFAULT_PARSER_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.text.subrip.SubripParser")
+          Class.forName("org.atomgram.messenger.exoplayer.text.subrip.SubripParser")
               .asSubclass(SubtitleParser.class));
     } catch (ClassNotFoundException e) {
       // Parser not found.
     }
     try {
       DEFAULT_PARSER_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.text.tx3g.Tx3gParser")
+          Class.forName("org.atomgram.messenger.exoplayer.text.tx3g.Tx3gParser")
               .asSubclass(SubtitleParser.class));
     } catch (ClassNotFoundException e) {
       // Parser not found.

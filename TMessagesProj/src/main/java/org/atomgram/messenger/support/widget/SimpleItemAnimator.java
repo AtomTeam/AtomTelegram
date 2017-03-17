@@ -1,10 +1,10 @@
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import org.telegram.messenger.support.widget.RecyclerView.Adapter;
-import org.telegram.messenger.support.widget.RecyclerView.ViewHolder;
-import org.telegram.messenger.support.widget.RecyclerView.ItemAnimator.ItemHolderInfo;
+import org.atomgram.messenger.support.widget.RecyclerView.Adapter;
+import org.atomgram.messenger.support.widget.RecyclerView.ViewHolder;
+import org.atomgram.messenger.support.widget.RecyclerView.ItemAnimator.ItemHolderInfo;
 import android.util.Log;
 import android.view.View;
 

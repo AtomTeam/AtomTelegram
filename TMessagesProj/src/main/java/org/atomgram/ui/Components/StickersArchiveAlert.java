@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,16 +17,16 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Cells.ArchivedStickerSetCell;
-import org.telegram.ui.StickersActivity;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Cells.ArchivedStickerSetCell;
+import org.atomgram.ui.StickersActivity;
 
 import java.util.ArrayList;
 

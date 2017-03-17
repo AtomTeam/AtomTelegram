@@ -1,13 +1,13 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.RectF;
 import android.os.Handler;
 import android.os.HandlerThread;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLog;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.DispatchQueue;
+import org.atomgram.messenger.FileLog;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

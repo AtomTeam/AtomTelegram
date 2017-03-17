@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.support.annotation.NonNull;
 import android.support.v4.animation.AnimatorCompatHelper;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
-import org.telegram.messenger.support.widget.RecyclerView.ViewHolder;
+import org.atomgram.messenger.support.widget.RecyclerView.ViewHolder;
 import android.view.View;
 
 import java.util.ArrayList;

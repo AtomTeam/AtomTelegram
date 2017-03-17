@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.wav;
+package org.atomgram.messenger.exoplayer.extractor.wav;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.extractor.Extractor;
-import org.telegram.messenger.exoplayer.extractor.ExtractorInput;
-import org.telegram.messenger.exoplayer.extractor.ExtractorOutput;
-import org.telegram.messenger.exoplayer.extractor.PositionHolder;
-import org.telegram.messenger.exoplayer.extractor.SeekMap;
-import org.telegram.messenger.exoplayer.extractor.TrackOutput;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.extractor.Extractor;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorInput;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorOutput;
+import org.atomgram.messenger.exoplayer.extractor.PositionHolder;
+import org.atomgram.messenger.exoplayer.extractor.SeekMap;
+import org.atomgram.messenger.exoplayer.extractor.TrackOutput;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
 import java.io.IOException;
 
 /** {@link Extractor} to extract samples from a WAV byte stream. */

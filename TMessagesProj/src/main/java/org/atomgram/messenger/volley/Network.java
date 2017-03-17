@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley;
+package org.atomgram.messenger.volley;
 
 /**
  * An interface for performing requests.

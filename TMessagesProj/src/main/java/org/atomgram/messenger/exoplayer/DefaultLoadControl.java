@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.os.Handler;
-import org.telegram.messenger.exoplayer.upstream.Allocator;
-import org.telegram.messenger.exoplayer.upstream.NetworkLock;
+import org.atomgram.messenger.exoplayer.upstream.Allocator;
+import org.atomgram.messenger.exoplayer.upstream.NetworkLock;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

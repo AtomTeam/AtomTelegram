@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
 import android.util.SparseArray;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.extractor.DefaultTrackOutput;
-import org.telegram.messenger.exoplayer.extractor.Extractor;
-import org.telegram.messenger.exoplayer.extractor.ExtractorInput;
-import org.telegram.messenger.exoplayer.extractor.ExtractorOutput;
-import org.telegram.messenger.exoplayer.extractor.SeekMap;
-import org.telegram.messenger.exoplayer.extractor.TrackOutput;
-import org.telegram.messenger.exoplayer.upstream.Allocator;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.extractor.DefaultTrackOutput;
+import org.atomgram.messenger.exoplayer.extractor.Extractor;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorInput;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorOutput;
+import org.atomgram.messenger.exoplayer.extractor.SeekMap;
+import org.atomgram.messenger.exoplayer.extractor.TrackOutput;
+import org.atomgram.messenger.exoplayer.upstream.Allocator;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
 import java.io.IOException;
 
 /**

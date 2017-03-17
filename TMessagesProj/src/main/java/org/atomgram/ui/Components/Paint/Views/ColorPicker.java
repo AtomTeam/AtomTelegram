@@ -1,4 +1,4 @@
-package org.telegram.ui.Components.Paint.Views;
+package org.atomgram.ui.Components.Paint.Views;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -18,10 +18,10 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.R;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.Paint.Swatch;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.Paint.Swatch;
 
 public class ColorPicker extends FrameLayout {
 

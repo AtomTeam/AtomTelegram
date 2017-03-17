@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text;
+package org.atomgram.messenger.exoplayer.text;
 
-import org.telegram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.ParserException;
 
 /**
  * Parses {@link Subtitle}s from a byte array.

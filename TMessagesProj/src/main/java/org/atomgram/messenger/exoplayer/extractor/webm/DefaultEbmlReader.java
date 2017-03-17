@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.webm;
+package org.atomgram.messenger.exoplayer.extractor.webm;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.extractor.ExtractorInput;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorInput;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Stack;

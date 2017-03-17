@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.content.Context;
 import android.os.Build;
@@ -17,20 +17,20 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.SimpleTextView;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.ChatActivity;
-import org.telegram.ui.ProfileActivity;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.SimpleTextView;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.ProfileActivity;
 
 public class ChatAvatarContainer extends FrameLayout {
 

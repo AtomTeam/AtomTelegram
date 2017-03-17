@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -35,12 +35,12 @@ import android.support.v4.app.RemoteInput;
 import android.text.TextUtils;
 import android.util.SparseArray;
 
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.LaunchActivity;
-import org.telegram.ui.PopupNotificationActivity;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.LaunchActivity;
+import org.atomgram.ui.PopupNotificationActivity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -696,7 +696,7 @@ public class NotificationsController {
                 lastBadgeCount = count;
                 try {
                     ContentValues cv = new ContentValues();
-                    cv.put("tag", "org.telegram.messenger/org.telegram.ui.LaunchActivity");
+                    cv.put("tag", "org.atomgram.messenger/org.atomgram.ui.LaunchActivity");
                     cv.put("count", count);
                     ApplicationLoader.applicationContext.getContentResolver().insert(Uri.parse("content://com.teslacoilsw.notifier/unread_count"), cv);
                 } catch (Throwable e) {
@@ -1844,7 +1844,7 @@ public class NotificationsController {
 
             Intent msgHeardIntent = new Intent();
             msgHeardIntent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
-            msgHeardIntent.setAction("org.telegram.messenger.ACTION_MESSAGE_HEARD");
+            msgHeardIntent.setAction("org.atomgram.messenger.ACTION_MESSAGE_HEARD");
             msgHeardIntent.putExtra("dialog_id", dialog_id);
             msgHeardIntent.putExtra("max_id", max_id);
             PendingIntent msgHeardPendingIntent = PendingIntent.getBroadcast(ApplicationLoader.applicationContext, notificationId, msgHeardIntent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -1855,7 +1855,7 @@ public class NotificationsController {
             if (!ChatObject.isChannel(chat) && !AndroidUtilities.needShowPasscode(false) && !UserConfig.isWaitingForPasscodeEnter) {
                 Intent msgReplyIntent = new Intent();
                 msgReplyIntent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
-                msgReplyIntent.setAction("org.telegram.messenger.ACTION_MESSAGE_REPLY");
+                msgReplyIntent.setAction("org.atomgram.messenger.ACTION_MESSAGE_REPLY");
                 msgReplyIntent.putExtra("dialog_id", dialog_id);
                 msgReplyIntent.putExtra("max_id", max_id);
                 PendingIntent msgReplyPendingIntent = PendingIntent.getBroadcast(ApplicationLoader.applicationContext, notificationId, msgReplyIntent, PendingIntent.FLAG_UPDATE_CURRENT);

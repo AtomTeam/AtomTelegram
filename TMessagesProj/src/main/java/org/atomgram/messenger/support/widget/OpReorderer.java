@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import java.util.List;
 
-import org.telegram.messenger.support.widget.AdapterHelper.UpdateOp;
-import static org.telegram.messenger.support.widget.AdapterHelper.UpdateOp.ADD;
-import static org.telegram.messenger.support.widget.AdapterHelper.UpdateOp.MOVE;
-import static org.telegram.messenger.support.widget.AdapterHelper.UpdateOp.REMOVE;
-import static org.telegram.messenger.support.widget.AdapterHelper.UpdateOp.UPDATE;
+import org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp;
+import static org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp.ADD;
+import static org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp.MOVE;
+import static org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp.REMOVE;
+import static org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp.UPDATE;
 
 class OpReorderer {
 

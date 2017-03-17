@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.ts;
+package org.atomgram.messenger.exoplayer.extractor.ts;
 
-import org.telegram.messenger.exoplayer.extractor.TrackOutput;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.extractor.TrackOutput;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 
 /**
  * Extracts individual samples from an elementary media stream, preserving original order.

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.eia608;
+package org.atomgram.messenger.exoplayer.text.eia608;
 
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.ParsableBitArray;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.ParsableBitArray;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 import java.util.ArrayList;
 
 /**

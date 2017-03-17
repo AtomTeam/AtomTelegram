@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 1.3.x.
+ * This is the source code of Atomgram for Android v. 1.3.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -25,11 +25,11 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.SparseArray;
 
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -214,7 +214,7 @@ public class ContactsController {
         AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
         Account[] accounts;
         try {
-            accounts = am.getAccountsByType("org.telegram.account");
+            accounts = am.getAccountsByType("org.atomgram.account");
             if (accounts != null && accounts.length > 0) {
                 for (int a = 0; a < accounts.length; a++) {
                     am.removeAccount(accounts[a], null, null);
@@ -224,7 +224,7 @@ public class ContactsController {
             FileLog.e("tmessages", e);
         }
 
-        accounts = am.getAccountsByType("org.telegram.messenger");
+        accounts = am.getAccountsByType("org.atomgram.messenger");
         boolean recreateAccount = false;
         if (UserConfig.isClientActivated()) {
             if (accounts.length == 1) {
@@ -253,7 +253,7 @@ public class ContactsController {
             }
             if (UserConfig.isClientActivated()) {
                 try {
-                    currentAccount = new Account("" + UserConfig.getClientUserId(), "org.telegram.messenger");
+                    currentAccount = new Account("" + UserConfig.getClientUserId(), "org.atomgram.messenger");
                     am.addAccountExplicitly(currentAccount, "", null);
                 } catch (Exception e) {
                     FileLog.e("tmessages", e);
@@ -265,7 +265,7 @@ public class ContactsController {
     public void deleteAllAppAccounts() {
         try {
             AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
-            Account[] accounts = am.getAccountsByType("org.telegram.messenger");
+            Account[] accounts = am.getAccountsByType("org.atomgram.messenger");
             for (int a = 0; a < accounts.length; a++) {
                 am.removeAccount(accounts[a], null, null);
             }
@@ -554,12 +554,12 @@ public class ContactsController {
                 /*if (schedule) {
                     try {
                         AccountManager am = AccountManager.get(ApplicationLoader.applicationContext);
-                        Account[] accounts = am.getAccountsByType("org.telegram.account");
+                        Account[] accounts = am.getAccountsByType("org.atomgram.account");
                         boolean recreateAccount = false;
                         if (UserConfig.isClientActivated()) {
                             if (accounts.length != 1) {
                                 FileLog.e("tmessages", "detected account deletion!");
-                                currentAccount = new Account(UserConfig.getCurrentUser().phone, "org.telegram.account");
+                                currentAccount = new Account(UserConfig.getCurrentUser().phone, "org.atomgram.account");
                                 am.addAccountExplicitly(currentAccount, "", null);
                                 AndroidUtilities.runOnUIThread(new Runnable() {
                                     @Override
@@ -1595,9 +1595,9 @@ public class ContactsController {
 
         builder = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI);
         builder.withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0);
-        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile");
+        builder.withValue(ContactsContract.Data.MIMETYPE, "vnd.android.cursor.item/vnd.org.atomgram.messenger.android.profile");
         builder.withValue(ContactsContract.Data.DATA1, user.id);
-        builder.withValue(ContactsContract.Data.DATA2, "Telegram Profile");
+        builder.withValue(ContactsContract.Data.DATA2, "Atomgram Profile");
         builder.withValue(ContactsContract.Data.DATA3, "+" + user.phone);
         builder.withValue(ContactsContract.Data.DATA4, user.id);
         query.add(builder.build());

@@ -1,28 +1,28 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x
+ * This is the source code of Atomgram for Android v. 3.x.x
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Adapters;
+package org.atomgram.ui.Adapters;
 
 import android.location.Location;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.volley.Request;
-import org.telegram.messenger.volley.RequestQueue;
-import org.telegram.messenger.volley.Response;
-import org.telegram.messenger.volley.VolleyError;
-import org.telegram.messenger.volley.toolbox.JsonObjectRequest;
-import org.telegram.messenger.volley.toolbox.Volley;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.tgnet.TLRPC;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.volley.Request;
+import org.atomgram.messenger.volley.RequestQueue;
+import org.atomgram.messenger.volley.Response;
+import org.atomgram.messenger.volley.VolleyError;
+import org.atomgram.messenger.volley.toolbox.JsonObjectRequest;
+import org.atomgram.messenger.volley.toolbox.Volley;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.BuildVars;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.tgnet.TLRPC;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;

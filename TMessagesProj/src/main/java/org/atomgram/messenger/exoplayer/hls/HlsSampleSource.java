@@ -13,26 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
 import android.os.Handler;
 import android.os.SystemClock;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.LoadControl;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.MediaFormatHolder;
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.SampleSource;
-import org.telegram.messenger.exoplayer.SampleSource.SampleSourceReader;
-import org.telegram.messenger.exoplayer.TrackRenderer;
-import org.telegram.messenger.exoplayer.chunk.BaseChunkSampleSourceEventListener;
-import org.telegram.messenger.exoplayer.chunk.Chunk;
-import org.telegram.messenger.exoplayer.chunk.ChunkOperationHolder;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.upstream.Loader;
-import org.telegram.messenger.exoplayer.upstream.Loader.Loadable;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.LoadControl;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.MediaFormatHolder;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.SampleSource;
+import org.atomgram.messenger.exoplayer.SampleSource.SampleSourceReader;
+import org.atomgram.messenger.exoplayer.TrackRenderer;
+import org.atomgram.messenger.exoplayer.chunk.BaseChunkSampleSourceEventListener;
+import org.atomgram.messenger.exoplayer.chunk.Chunk;
+import org.atomgram.messenger.exoplayer.chunk.ChunkOperationHolder;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.upstream.Loader;
+import org.atomgram.messenger.exoplayer.upstream.Loader.Loadable;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;

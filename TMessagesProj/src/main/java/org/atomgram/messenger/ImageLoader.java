@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
@@ -25,10 +25,10 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Components.AnimatedFileDrawable;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Components.AnimatedFileDrawable;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -86,7 +86,7 @@ public class ImageLoader {
     private int lastImageNum = 0;
     private long lastProgressUpdateTime = 0;
 
-    private File telegramPath = null;
+    private File AtomgramPath = null;
 
     private class ThumbGenerateInfo {
         private int count;
@@ -1219,8 +1219,8 @@ public class ImageLoader {
                 AndroidUtilities.runOnUIThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (MediaController.getInstance().canSaveToGallery() && telegramPath != null && finalFile != null && (location.endsWith(".mp4") || location.endsWith(".jpg"))) {
-                            if (finalFile.toString().startsWith(telegramPath.toString())) {
+                        if (MediaController.getInstance().canSaveToGallery() && AtomgramPath != null && finalFile != null && (location.endsWith(".mp4") || location.endsWith(".jpg"))) {
+                            if (finalFile.toString().startsWith(AtomgramPath.toString())) {
                                 AndroidUtilities.addMediaToGallery(finalFile.toString());
                             }
                         }
@@ -1344,12 +1344,12 @@ public class ImageLoader {
 
         try {
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-                telegramPath = new File(Environment.getExternalStorageDirectory(), "Telegram");
-                telegramPath.mkdirs();
+                AtomgramPath = new File(Environment.getExternalStorageDirectory(), "Atomgram");
+                AtomgramPath.mkdirs();
 
-                if (telegramPath.isDirectory()) {
+                if (AtomgramPath.isDirectory()) {
                     try {
-                        File imagePath = new File(telegramPath, "Telegram Images");
+                        File imagePath = new File(AtomgramPath, "Atomgram Images");
                         imagePath.mkdir();
                         if (imagePath.isDirectory() && canMoveFiles(cachePath, imagePath, FileLoader.MEDIA_DIR_IMAGE)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_IMAGE, imagePath);
@@ -1360,7 +1360,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File videoPath = new File(telegramPath, "Telegram Video");
+                        File videoPath = new File(AtomgramPath, "Atomgram Video");
                         videoPath.mkdir();
                         if (videoPath.isDirectory() && canMoveFiles(cachePath, videoPath, FileLoader.MEDIA_DIR_VIDEO)) {
                             mediaDirs.put(FileLoader.MEDIA_DIR_VIDEO, videoPath);
@@ -1371,7 +1371,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File audioPath = new File(telegramPath, "Telegram Audio");
+                        File audioPath = new File(AtomgramPath, "Atomgram Audio");
                         audioPath.mkdir();
                         if (audioPath.isDirectory() && canMoveFiles(cachePath, audioPath, FileLoader.MEDIA_DIR_AUDIO)) {
                             new File(audioPath, ".nomedia").createNewFile();
@@ -1383,7 +1383,7 @@ public class ImageLoader {
                     }
 
                     try {
-                        File documentPath = new File(telegramPath, "Telegram Documents");
+                        File documentPath = new File(AtomgramPath, "Atomgram Documents");
                         documentPath.mkdir();
                         if (documentPath.isDirectory() && canMoveFiles(cachePath, documentPath, FileLoader.MEDIA_DIR_DOCUMENT)) {
                             new File(documentPath, ".nomedia").createNewFile();

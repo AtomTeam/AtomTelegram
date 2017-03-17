@@ -4,7 +4,7 @@
 	android:exitFadeDuration="200">
 	<item android:state_pressed="true">
 		<shape android:shape="rectangle">
-			<solid android:color="#ffd1d6d9" />
+			<solid android:color="#d1d9d6" />
 		</shape>
 	</item>
 	<item android:drawable="@drawable/transparent"/>

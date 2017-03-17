@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.webvtt;
+package org.atomgram.messenger.exoplayer.text.webvtt;
 
 import android.text.TextUtils;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.text.SubtitleParser;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.text.SubtitleParser;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 import java.util.ArrayList;
 
 /**

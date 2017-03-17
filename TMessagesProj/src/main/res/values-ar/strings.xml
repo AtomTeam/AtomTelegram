@@ -599,8 +599,8 @@
     <string name="Language">اللغة</string>
     <string name="AskAQuestionInfo">نرجو الأخذ بالعلم أن الدعم الفني في تيليجرام يقوم به مجموعة من المتطوعين. نحن نحاول الرد بسرعة قدر المستطاع، لكن ربما نستغرق القليل من الوقت.<![CDATA[<br><br>]]> <![CDATA[<a href=\"https://telegram.org/faq/ar\">صفحة الأسئلة الأكثر شيوعًا</a>]]>: يوجد بها حلول للمشاكل وإجابات لمعظم الأسئلة.</string>
     <string name="AskButton">اسأل أحد المتطوعين</string>
-    <string name="TelegramFaq">الأسئلة الشائعة عن تيليجرام</string>
-    <string name="TelegramFaqUrl">https://telegram.org/faq/ar</string>
+    <string name="AtomgramFaq">الأسئلة الشائعة عن تيليجرام</string>
+    <string name="AtomgramFaqUrl">https://telegram.org/faq/ar</string>
     <string name="PrivacyPolicy">سياسة الخصوصية</string>
     <string name="PrivacyPolicyUrl">https://telegram.org/privacy</string>
     <string name="DeleteLocalization">حذف التعريب؟</string>

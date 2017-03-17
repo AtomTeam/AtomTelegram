@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.ts;
+package org.atomgram.messenger.exoplayer.extractor.ts;
 
-import org.telegram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.C;
 
 /**
  * Scales and adjusts MPEG-2 TS presentation timestamps, taking into account an initial offset and

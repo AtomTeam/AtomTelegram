@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget.helper;
+package org.atomgram.messenger.support.widget.helper;
 
 import android.content.res.Resources;
 import android.graphics.Canvas;
@@ -30,11 +30,11 @@ import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.VelocityTrackerCompat;
 import android.support.v4.view.ViewCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.messenger.support.widget.RecyclerView.OnItemTouchListener;
-import org.telegram.messenger.support.widget.RecyclerView.ViewHolder;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.messenger.support.widget.RecyclerView.OnItemTouchListener;
+import org.atomgram.messenger.support.widget.RecyclerView.ViewHolder;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.HapticFeedbackConstants;

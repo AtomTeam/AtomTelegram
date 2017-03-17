@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.upstream;
+package org.atomgram.messenger.exoplayer.upstream;
 
 import android.os.Handler;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Clock;
-import org.telegram.messenger.exoplayer.util.SlidingPercentile;
-import org.telegram.messenger.exoplayer.util.SystemClock;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Clock;
+import org.atomgram.messenger.exoplayer.util.SlidingPercentile;
+import org.atomgram.messenger.exoplayer.util.SystemClock;
 
 /**
  * Counts transferred bytes while transfers are open and creates a bandwidth sample and updated

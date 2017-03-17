@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.ogg;
+package org.atomgram.messenger.exoplayer.extractor.ogg;
 
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 
 /**
  * Wraps a byte array, providing methods that allow it to be read as a vorbis bitstream.

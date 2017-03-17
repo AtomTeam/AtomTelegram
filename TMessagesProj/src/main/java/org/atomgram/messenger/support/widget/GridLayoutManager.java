@@ -13,7 +13,7 @@
  * See the License for the specific languag`e governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.content.Context;
 import android.graphics.Rect;

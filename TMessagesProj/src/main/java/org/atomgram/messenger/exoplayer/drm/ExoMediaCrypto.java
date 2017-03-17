@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.drm;
+package org.atomgram.messenger.exoplayer.drm;
 
 /**
  * An opaque {@link android.media.MediaCrypto} equivalent.

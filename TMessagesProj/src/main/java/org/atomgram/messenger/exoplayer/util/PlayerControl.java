@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
 import android.widget.MediaController.MediaPlayerControl;
-import org.telegram.messenger.exoplayer.ExoPlayer;
+import org.atomgram.messenger.exoplayer.ExoPlayer;
 
 /**
  * An implementation of {@link MediaPlayerControl} for controlling an {@link ExoPlayer} instance.
@@ -51,9 +51,9 @@ public class PlayerControl implements MediaPlayerControl {
    * This is an unsupported operation.
    * <p>
    * Application of audio effects is dependent on the audio renderer used. When using
-   * {@link org.telegram.messenger.exoplayer.MediaCodecAudioTrackRenderer}, the recommended approach is
+   * {@link org.atomgram.messenger.exoplayer.MediaCodecAudioTrackRenderer}, the recommended approach is
    * to extend the class and override
-   * {@link org.telegram.messenger.exoplayer.MediaCodecAudioTrackRenderer#onAudioSessionId}.
+   * {@link org.atomgram.messenger.exoplayer.MediaCodecAudioTrackRenderer#onAudioSessionId}.
    *
    * @throws UnsupportedOperationException Always thrown.
    */

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.video;
+package org.atomgram.messenger.video;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

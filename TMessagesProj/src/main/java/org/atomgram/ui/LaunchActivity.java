@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -44,39 +44,39 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NativeCrashManager;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.query.DraftQuery;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.Adapters.DrawerLayoutAdapter;
-import org.telegram.ui.ActionBar.ActionBarLayout;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ActionBar.DrawerLayoutContainer;
-import org.telegram.ui.Components.JoinGroupAlert;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.PasscodeView;
-import org.telegram.ui.Components.StickersAlert;
-import org.telegram.ui.ActionBar.Theme;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.ImageLoader;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NativeCrashManager;
+import org.atomgram.messenger.SendMessagesHelper;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.messenger.query.DraftQuery;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.Adapters.DrawerLayoutAdapter;
+import org.atomgram.ui.ActionBar.ActionBarLayout;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ActionBar.DrawerLayoutContainer;
+import org.atomgram.ui.Components.JoinGroupAlert;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.PasscodeView;
+import org.atomgram.ui.Components.StickersAlert;
+import org.atomgram.ui.ActionBar.Theme;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -382,7 +382,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                     presentFragment(new SettingsActivity());
                     drawerLayoutContainer.closeDrawer(false);
                 } else if (position == 9) {
-                    Browser.openUrl(LaunchActivity.this, LocaleController.getString("TelegramFaqUrl", R.string.TelegramFaqUrl));
+                    Browser.openUrl(LaunchActivity.this, LocaleController.getString("AtomgramFaqUrl", R.string.AtomgramFaqUrl));
                     drawerLayoutContainer.closeDrawer(false);
                 }
             }
@@ -901,7 +901,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                             if (scheme != null) {
                                 if ((scheme.equals("http") || scheme.equals("https"))) {
                                     String host = data.getHost().toLowerCase();
-                                    if (host.equals("telegram.me") || host.equals("telegram.dog")) {
+                                    if (host.equals("Atomgram.me") || host.equals("Atomgram.dog")) {
                                         String path = data.getPath();
                                         if (path != null && path.length() > 1) {
                                             path = path.substring(1);
@@ -950,7 +950,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                                 } else if (scheme.equals("tg")) {
                                     String url = data.toString();
                                     if (url.startsWith("tg:resolve") || url.startsWith("tg://resolve")) {
-                                        url = url.replace("tg:resolve", "tg://telegram.org").replace("tg://resolve", "tg://telegram.org");
+                                        url = url.replace("tg:resolve", "tg://Atomgram.org").replace("tg://resolve", "tg://Atomgram.org");
                                         data = Uri.parse(url);
                                         username = data.getQueryParameter("domain");
                                         botUser = data.getQueryParameter("start");
@@ -961,15 +961,15 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                                             messageId = null;
                                         }
                                     } else if (url.startsWith("tg:join") || url.startsWith("tg://join")) {
-                                        url = url.replace("tg:join", "tg://telegram.org").replace("tg://join", "tg://telegram.org");
+                                        url = url.replace("tg:join", "tg://Atomgram.org").replace("tg://join", "tg://Atomgram.org");
                                         data = Uri.parse(url);
                                         group = data.getQueryParameter("invite");
                                     } else if (url.startsWith("tg:addstickers") || url.startsWith("tg://addstickers")) {
-                                        url = url.replace("tg:addstickers", "tg://telegram.org").replace("tg://addstickers", "tg://telegram.org");
+                                        url = url.replace("tg:addstickers", "tg://Atomgram.org").replace("tg://addstickers", "tg://Atomgram.org");
                                         data = Uri.parse(url);
                                         sticker = data.getQueryParameter("set");
                                     } else if (url.startsWith("tg:msg") || url.startsWith("tg://msg") || url.startsWith("tg://share") || url.startsWith("tg:share")) {
-                                        url = url.replace("tg:msg", "tg://telegram.org").replace("tg://msg", "tg://telegram.org").replace("tg://share", "tg://telegram.org").replace("tg:share", "tg://telegram.org");
+                                        url = url.replace("tg:msg", "tg://Atomgram.org").replace("tg://msg", "tg://Atomgram.org").replace("tg://share", "tg://Atomgram.org").replace("tg:share", "tg://Atomgram.org");
                                         data = Uri.parse(url);
                                         message = data.getQueryParameter("url");
                                         if (message == null) {
@@ -1022,7 +1022,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                                 }
                             }
                         }
-                    } else if (intent.getAction().equals("org.telegram.messenger.OPEN_ACCOUNT")) {
+                    } else if (intent.getAction().equals("org.atomgram.messenger.OPEN_ACCOUNT")) {
                         open_settings = 1;
                     } else if (intent.getAction().startsWith("com.tmessages.openchat")) {
                         int chatId = intent.getIntExtra("chatId", 0);

@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.Manifest;
 import android.app.Activity;
@@ -20,20 +20,20 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildConfig;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.MediaController;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.LaunchActivity;
-import org.telegram.ui.PhotoAlbumPickerActivity;
-import org.telegram.ui.PhotoCropActivity;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.PhotoViewer;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.BuildConfig;
+import org.atomgram.messenger.ImageLoader;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.LaunchActivity;
+import org.atomgram.ui.PhotoAlbumPickerActivity;
+import org.atomgram.ui.PhotoCropActivity;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.PhotoViewer;
 
 import java.io.File;
 import java.util.ArrayList;

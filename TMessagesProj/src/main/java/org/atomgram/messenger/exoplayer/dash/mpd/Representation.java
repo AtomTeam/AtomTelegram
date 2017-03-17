@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash.mpd;
+package org.atomgram.messenger.exoplayer.dash.mpd;
 
 import android.net.Uri;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.chunk.FormatWrapper;
-import org.telegram.messenger.exoplayer.dash.DashSegmentIndex;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.MultiSegmentBase;
-import org.telegram.messenger.exoplayer.dash.mpd.SegmentBase.SingleSegmentBase;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.chunk.FormatWrapper;
+import org.atomgram.messenger.exoplayer.dash.DashSegmentIndex;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.MultiSegmentBase;
+import org.atomgram.messenger.exoplayer.dash.mpd.SegmentBase.SingleSegmentBase;
 
 /**
  * A DASH representation.

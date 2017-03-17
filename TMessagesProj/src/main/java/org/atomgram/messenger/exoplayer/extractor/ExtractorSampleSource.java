@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor;
+package org.atomgram.messenger.exoplayer.extractor;
 
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.util.SparseArray;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.MediaFormatHolder;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.SampleHolder;
-import org.telegram.messenger.exoplayer.SampleSource;
-import org.telegram.messenger.exoplayer.SampleSource.SampleSourceReader;
-import org.telegram.messenger.exoplayer.TrackRenderer;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.upstream.Allocator;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
-import org.telegram.messenger.exoplayer.upstream.Loader;
-import org.telegram.messenger.exoplayer.upstream.Loader.Loadable;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.MediaFormatHolder;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.SampleHolder;
+import org.atomgram.messenger.exoplayer.SampleSource;
+import org.atomgram.messenger.exoplayer.SampleSource.SampleSourceReader;
+import org.atomgram.messenger.exoplayer.TrackRenderer;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.upstream.Allocator;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.upstream.Loader;
+import org.atomgram.messenger.exoplayer.upstream.Loader.Loadable;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,16 +47,16 @@ import java.util.List;
  * format will be detected automatically from the following supported formats:
  *
  * <ul>
- * <li>MP4, including M4A ({@link org.telegram.messenger.exoplayer.extractor.mp4.Mp4Extractor})</li>
- * <li>fMP4 ({@link org.telegram.messenger.exoplayer.extractor.mp4.FragmentedMp4Extractor})</li>
- * <li>Matroska and WebM ({@link org.telegram.messenger.exoplayer.extractor.webm.WebmExtractor})</li>
- * <li>Ogg Vorbis/FLAC ({@link org.telegram.messenger.exoplayer.extractor.ogg.OggExtractor}</li>
- * <li>MP3 ({@link org.telegram.messenger.exoplayer.extractor.mp3.Mp3Extractor})</li>
- * <li>AAC ({@link org.telegram.messenger.exoplayer.extractor.ts.AdtsExtractor})</li>
- * <li>MPEG TS ({@link org.telegram.messenger.exoplayer.extractor.ts.TsExtractor})</li>
- * <li>MPEG PS ({@link org.telegram.messenger.exoplayer.extractor.ts.PsExtractor})</li>
- * <li>FLV ({@link org.telegram.messenger.exoplayer.extractor.flv.FlvExtractor})</li>
- * <li>WAV ({@link org.telegram.messenger.exoplayer.extractor.wav.WavExtractor})</li>
+ * <li>MP4, including M4A ({@link org.atomgram.messenger.exoplayer.extractor.mp4.Mp4Extractor})</li>
+ * <li>fMP4 ({@link org.atomgram.messenger.exoplayer.extractor.mp4.FragmentedMp4Extractor})</li>
+ * <li>Matroska and WebM ({@link org.atomgram.messenger.exoplayer.extractor.webm.WebmExtractor})</li>
+ * <li>Ogg Vorbis/FLAC ({@link org.atomgram.messenger.exoplayer.extractor.ogg.OggExtractor}</li>
+ * <li>MP3 ({@link org.atomgram.messenger.exoplayer.extractor.mp3.Mp3Extractor})</li>
+ * <li>AAC ({@link org.atomgram.messenger.exoplayer.extractor.ts.AdtsExtractor})</li>
+ * <li>MPEG TS ({@link org.atomgram.messenger.exoplayer.extractor.ts.TsExtractor})</li>
+ * <li>MPEG PS ({@link org.atomgram.messenger.exoplayer.extractor.ts.PsExtractor})</li>
+ * <li>FLV ({@link org.atomgram.messenger.exoplayer.extractor.flv.FlvExtractor})</li>
+ * <li>WAV ({@link org.atomgram.messenger.exoplayer.extractor.wav.WavExtractor})</li>
  * <li>FLAC (only available if the FLAC extension is built and included)</li>
  * </ul>
  *
@@ -121,77 +121,77 @@ public final class ExtractorSampleSource implements SampleSource, SampleSourceRe
     // can detect the use of reflection (see http://proguard.sourceforge.net/FAQ.html#forname).
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.webm.WebmExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.webm.WebmExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.mp4.FragmentedMp4Extractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.mp4.FragmentedMp4Extractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.mp4.Mp4Extractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.mp4.Mp4Extractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.mp3.Mp3Extractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.mp3.Mp3Extractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.ts.AdtsExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.ts.AdtsExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.ts.TsExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.ts.TsExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.flv.FlvExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.flv.FlvExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.ogg.OggExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.ogg.OggExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.ts.PsExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.ts.PsExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.extractor.wav.WavExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.extractor.wav.WavExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.
     }
     try {
       DEFAULT_EXTRACTOR_CLASSES.add(
-          Class.forName("org.telegram.messenger.exoplayer.ext.flac.FlacExtractor")
+          Class.forName("org.atomgram.messenger.exoplayer.ext.flac.FlacExtractor")
               .asSubclass(Extractor.class));
     } catch (ClassNotFoundException e) {
       // Extractor not found.

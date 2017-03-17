@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash;
+package org.atomgram.messenger.exoplayer.dash;
 
 import android.content.Context;
-import org.telegram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
-import org.telegram.messenger.exoplayer.dash.mpd.AdaptationSet;
-import org.telegram.messenger.exoplayer.dash.mpd.MediaPresentationDescription;
-import org.telegram.messenger.exoplayer.dash.mpd.Period;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
+import org.atomgram.messenger.exoplayer.dash.mpd.AdaptationSet;
+import org.atomgram.messenger.exoplayer.dash.mpd.MediaPresentationDescription;
+import org.atomgram.messenger.exoplayer.dash.mpd.Period;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 
 /**

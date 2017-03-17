@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash;
+package org.atomgram.messenger.exoplayer.dash;
 
-import org.telegram.messenger.exoplayer.dash.mpd.RangedUri;
-import org.telegram.messenger.exoplayer.extractor.ChunkIndex;
+import org.atomgram.messenger.exoplayer.dash.mpd.RangedUri;
+import org.atomgram.messenger.exoplayer.extractor.ChunkIndex;
 
 /**
  * An implementation of {@link DashSegmentIndex} that wraps a {@link ChunkIndex} parsed from a

@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,19 +27,19 @@ import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
-import org.telegram.messenger.audioinfo.AudioInfo;
-import org.telegram.messenger.query.DraftQuery;
-import org.telegram.messenger.query.SearchQuery;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.NativeByteBuffer;
-import org.telegram.tgnet.QuickAckDelegate;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.SerializedData;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ChatActivity;
+import org.atomgram.messenger.audioinfo.AudioInfo;
+import org.atomgram.messenger.query.DraftQuery;
+import org.atomgram.messenger.query.SearchQuery;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.NativeByteBuffer;
+import org.atomgram.tgnet.QuickAckDelegate;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.SerializedData;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ChatActivity;
 
 import java.io.File;
 import java.io.RandomAccessFile;

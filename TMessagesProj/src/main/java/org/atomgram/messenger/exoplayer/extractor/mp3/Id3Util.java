@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.mp3;
+package org.atomgram.messenger.exoplayer.extractor.mp3;
 
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.extractor.ExtractorInput;
-import org.telegram.messenger.exoplayer.extractor.GaplessInfo;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorInput;
+import org.atomgram.messenger.exoplayer.extractor.GaplessInfo;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 import java.nio.charset.Charset;
 

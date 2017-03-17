@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.ui.Components;
+package org.atomgram.ui.Components;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -29,7 +29,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AndroidUtilities;
 
 public class ColorPickerView extends View {
 

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
 
 /**
  * Holds a {@link MediaFormat} and corresponding drm scheme initialization data.

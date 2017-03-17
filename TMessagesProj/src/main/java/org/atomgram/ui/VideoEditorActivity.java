@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -43,29 +43,29 @@ import com.coremedia.iso.boxes.TrackHeaderBox;
 import com.googlecode.mp4parser.util.Matrix;
 import com.googlecode.mp4parser.util.Path;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Adapters.MentionsAdapter;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.PhotoViewerCaptionEnterView;
-import org.telegram.ui.Components.PickerBottomLayoutViewer;
-import org.telegram.ui.Components.RecyclerListView;
-import org.telegram.ui.Components.SizeNotifierFrameLayoutPhoto;
-import org.telegram.ui.Components.VideoSeekBarView;
-import org.telegram.ui.Components.VideoTimelineView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Adapters.MentionsAdapter;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.PhotoViewerCaptionEnterView;
+import org.atomgram.ui.Components.PickerBottomLayoutViewer;
+import org.atomgram.ui.Components.RecyclerListView;
+import org.atomgram.ui.Components.SizeNotifierFrameLayoutPhoto;
+import org.atomgram.ui.Components.VideoSeekBarView;
+import org.atomgram.ui.Components.VideoTimelineView;
 
 import java.io.File;
 import java.util.List;

@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.smoothstreaming;
+package org.atomgram.messenger.exoplayer.smoothstreaming;
 
 import android.util.Base64;
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
-import org.telegram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.ProtectionElement;
-import org.telegram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.StreamElement;
-import org.telegram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.TrackElement;
-import org.telegram.messenger.exoplayer.upstream.UriLoadable;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.CodecSpecificDataUtil;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.extractor.mp4.PsshAtomUtil;
+import org.atomgram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.ProtectionElement;
+import org.atomgram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.StreamElement;
+import org.atomgram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.TrackElement;
+import org.atomgram.messenger.exoplayer.upstream.UriLoadable;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.CodecSpecificDataUtil;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;

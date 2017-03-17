@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.support.v4.util.Pools;
 import android.util.Log;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.telegram.messenger.support.widget.RecyclerView.*;
+import static org.atomgram.messenger.support.widget.RecyclerView.*;
 
 /**
  * Helper class that can enqueue and process adapter update operations.

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.chunk;
+package org.atomgram.messenger.exoplayer.chunk;
 
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.SampleSource;
-import org.telegram.messenger.exoplayer.SampleSource.SampleSourceReader;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.SampleSource;
+import org.atomgram.messenger.exoplayer.SampleSource.SampleSourceReader;
 import java.io.IOException;
 
 /**

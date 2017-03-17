@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -40,55 +40,55 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AnimatorListenerAdapterProxy;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.SecretChatHelper;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.query.BotQuery;
-import org.telegram.messenger.query.SharedMediaQuery;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.ui.ActionBar.BackDrawable;
-import org.telegram.ui.ActionBar.SimpleTextView;
-import org.telegram.ui.Cells.AboutLinkCell;
-import org.telegram.ui.Cells.DividerCell;
-import org.telegram.ui.Cells.EmptyCell;
-import org.telegram.ui.Cells.LoadingCell;
-import org.telegram.ui.Cells.ShadowSectionCell;
-import org.telegram.ui.Cells.TextCell;
-import org.telegram.ui.Cells.TextDetailCell;
-import org.telegram.ui.Cells.TextInfoPrivacyCell;
-import org.telegram.ui.Cells.UserCell;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.Components.AlertsCreator;
-import org.telegram.ui.Components.AvatarDrawable;
-import org.telegram.ui.Components.AvatarUpdater;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.IdenticonDrawable;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.RecyclerListView;
-import org.telegram.ui.ActionBar.Theme;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.PhoneFormat.PhoneFormat;
+import org.atomgram.messenger.AnimatorListenerAdapterProxy;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.SecretChatHelper;
+import org.atomgram.messenger.SendMessagesHelper;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.query.BotQuery;
+import org.atomgram.messenger.query.SharedMediaQuery;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.ui.ActionBar.BackDrawable;
+import org.atomgram.ui.ActionBar.SimpleTextView;
+import org.atomgram.ui.Cells.AboutLinkCell;
+import org.atomgram.ui.Cells.DividerCell;
+import org.atomgram.ui.Cells.EmptyCell;
+import org.atomgram.ui.Cells.LoadingCell;
+import org.atomgram.ui.Cells.ShadowSectionCell;
+import org.atomgram.ui.Cells.TextCell;
+import org.atomgram.ui.Cells.TextDetailCell;
+import org.atomgram.ui.Cells.TextInfoPrivacyCell;
+import org.atomgram.ui.Cells.UserCell;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.Components.AlertsCreator;
+import org.atomgram.ui.Components.AvatarDrawable;
+import org.atomgram.ui.Components.AvatarUpdater;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.IdenticonDrawable;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.RecyclerListView;
+import org.atomgram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -488,9 +488,9 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         intent.setType("text/plain");
                         String about = MessagesController.getInstance().getUserAbout(botInfo.user_id);
                         if (botInfo != null && about != null) {
-                            intent.putExtra(Intent.EXTRA_TEXT, String.format("%s https://telegram.me/%s", about, user.username));
+                            intent.putExtra(Intent.EXTRA_TEXT, String.format("%s https://Atomgram.me/%s", about, user.username));
                         } else {
-                            intent.putExtra(Intent.EXTRA_TEXT, String.format("https://telegram.me/%s", user.username));
+                            intent.putExtra(Intent.EXTRA_TEXT, String.format("https://Atomgram.me/%s", user.username));
                         }
                         startActivityForResult(Intent.createChooser(intent, LocaleController.getString("BotShare", R.string.BotShare)), 500);
                     } catch (Exception e) {
@@ -639,9 +639,9 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         Intent intent = new Intent(Intent.ACTION_SEND);
                         intent.setType("text/plain");
                         if (info.about != null && info.about.length() > 0) {
-                            intent.putExtra(Intent.EXTRA_TEXT, currentChat.title + "\n" + info.about + "\nhttps://telegram.me/" + currentChat.username);
+                            intent.putExtra(Intent.EXTRA_TEXT, currentChat.title + "\n" + info.about + "\nhttps://Atomgram.me/" + currentChat.username);
                         } else {
-                            intent.putExtra(Intent.EXTRA_TEXT, currentChat.title + "\nhttps://telegram.me/" + currentChat.username);
+                            intent.putExtra(Intent.EXTRA_TEXT, currentChat.title + "\nhttps://Atomgram.me/" + currentChat.username);
                         }
                         getParentActivity().startActivityForResult(Intent.createChooser(intent, LocaleController.getString("BotShare", R.string.BotShare)), 500);
                     } catch (Exception e) {
@@ -2436,7 +2436,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         } else {
                             text = "-";
                         }
-                        textDetailCell.setTextAndValue(text, "telegram.me/" + currentChat.username);
+                        textDetailCell.setTextAndValue(text, "Atomgram.me/" + currentChat.username);
                     }
                     break;
                 case 3:

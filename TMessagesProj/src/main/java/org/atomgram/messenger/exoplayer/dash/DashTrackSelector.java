@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash;
+package org.atomgram.messenger.exoplayer.dash;
 
-import org.telegram.messenger.exoplayer.dash.mpd.MediaPresentationDescription;
-import org.telegram.messenger.exoplayer.dash.mpd.Period;
+import org.atomgram.messenger.exoplayer.dash.mpd.MediaPresentationDescription;
+import org.atomgram.messenger.exoplayer.dash.mpd.Period;
 import java.io.IOException;
 
 /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.smoothstreaming;
+package org.atomgram.messenger.exoplayer.smoothstreaming;
 
 import java.io.IOException;
 

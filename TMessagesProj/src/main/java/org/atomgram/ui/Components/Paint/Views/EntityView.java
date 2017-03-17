@@ -1,4 +1,4 @@
-package org.telegram.ui.Components.Paint.Views;
+package org.atomgram.ui.Components.Paint.Views;
 
 import android.content.Context;
 import android.graphics.Paint;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.ui.Components.Point;
-import org.telegram.ui.Components.Rect;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.ui.Components.Point;
+import org.atomgram.ui.Components.Rect;
 
 import java.util.UUID;
 

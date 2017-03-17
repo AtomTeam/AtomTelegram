@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -20,18 +20,18 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.ui.Adapters.CountryAdapter;
-import org.telegram.ui.Adapters.CountryAdapter.Country;
-import org.telegram.ui.Adapters.CountrySearchAdapter;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.LetterSectionsListView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.Adapters.CountryAdapter;
+import org.atomgram.ui.Adapters.CountryAdapter.Country;
+import org.atomgram.ui.Adapters.CountrySearchAdapter;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.LetterSectionsListView;
 
 public class CountrySelectActivity extends BaseFragment {
 

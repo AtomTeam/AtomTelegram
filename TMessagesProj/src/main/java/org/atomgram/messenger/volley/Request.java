@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley;
+package org.atomgram.messenger.volley;
 
 import android.net.TrafficStats;
 import android.net.Uri;
@@ -22,7 +22,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import org.telegram.messenger.volley.VolleyLog.MarkerLog;
+import org.atomgram.messenger.volley.VolleyLog.MarkerLog;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

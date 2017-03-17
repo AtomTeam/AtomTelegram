@@ -1,12 +1,12 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.opengl.GLES20;
 
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.ui.Components.Size;
+import org.atomgram.messenger.DispatchQueue;
+import org.atomgram.ui.Components.Size;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

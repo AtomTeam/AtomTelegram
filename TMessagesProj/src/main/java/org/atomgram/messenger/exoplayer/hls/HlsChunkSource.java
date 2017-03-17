@@ -13,33 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
 import android.net.Uri;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
-import org.telegram.messenger.exoplayer.BehindLiveWindowException;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.MediaFormat;
-import org.telegram.messenger.exoplayer.chunk.Chunk;
-import org.telegram.messenger.exoplayer.chunk.ChunkOperationHolder;
-import org.telegram.messenger.exoplayer.chunk.DataChunk;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.extractor.Extractor;
-import org.telegram.messenger.exoplayer.extractor.mp3.Mp3Extractor;
-import org.telegram.messenger.exoplayer.extractor.ts.AdtsExtractor;
-import org.telegram.messenger.exoplayer.extractor.ts.PtsTimestampAdjuster;
-import org.telegram.messenger.exoplayer.extractor.ts.TsExtractor;
-import org.telegram.messenger.exoplayer.upstream.BandwidthMeter;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
-import org.telegram.messenger.exoplayer.upstream.HttpDataSource.InvalidResponseCodeException;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.MimeTypes;
-import org.telegram.messenger.exoplayer.util.UriUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.BehindLiveWindowException;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.MediaFormat;
+import org.atomgram.messenger.exoplayer.chunk.Chunk;
+import org.atomgram.messenger.exoplayer.chunk.ChunkOperationHolder;
+import org.atomgram.messenger.exoplayer.chunk.DataChunk;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.extractor.Extractor;
+import org.atomgram.messenger.exoplayer.extractor.mp3.Mp3Extractor;
+import org.atomgram.messenger.exoplayer.extractor.ts.AdtsExtractor;
+import org.atomgram.messenger.exoplayer.extractor.ts.PtsTimestampAdjuster;
+import org.atomgram.messenger.exoplayer.extractor.ts.TsExtractor;
+import org.atomgram.messenger.exoplayer.upstream.BandwidthMeter;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.upstream.HttpDataSource.InvalidResponseCodeException;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.MimeTypes;
+import org.atomgram.messenger.exoplayer.util.UriUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.math.BigInteger;

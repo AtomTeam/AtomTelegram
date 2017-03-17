@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -65,12 +65,12 @@ import net.hockeyapp.android.CrashManager;
 import net.hockeyapp.android.CrashManagerListener;
 import net.hockeyapp.android.UpdateManager;
 
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.ForegroundDetector;
-import org.telegram.ui.Components.NumberPicker;
-import org.telegram.ui.Components.TypefaceSpan;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.ForegroundDetector;
+import org.atomgram.ui.Components.NumberPicker;
+import org.atomgram.ui.Components.TypefaceSpan;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -1163,7 +1163,7 @@ public class AndroidUtilities {
         }
         File storageDir = null;
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "Telegram");
+            storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "Atomgram");
             if (!storageDir.mkdirs()) {
                 if (!storageDir.exists()){
                     FileLog.d("tmessages", "failed to create directory");

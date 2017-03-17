@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -20,16 +20,16 @@ import android.text.TextUtils;
 import android.text.style.URLSpan;
 import android.text.util.Linkify;
 
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Components.TypefaceSpan;
-import org.telegram.ui.Components.URLSpanBotCommand;
-import org.telegram.ui.Components.URLSpanNoUnderline;
-import org.telegram.ui.Components.URLSpanNoUnderlineBold;
-import org.telegram.ui.Components.URLSpanReplacement;
-import org.telegram.ui.Components.URLSpanUserMention;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Components.TypefaceSpan;
+import org.atomgram.ui.Components.URLSpanBotCommand;
+import org.atomgram.ui.Components.URLSpanNoUnderline;
+import org.atomgram.ui.Components.URLSpanNoUnderlineBold;
+import org.atomgram.ui.Components.URLSpanReplacement;
+import org.atomgram.ui.Components.URLSpanUserMention;
 
 import java.io.File;
 import java.util.AbstractMap;

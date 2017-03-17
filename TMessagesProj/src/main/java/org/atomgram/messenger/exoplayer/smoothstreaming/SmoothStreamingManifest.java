@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.smoothstreaming;
+package org.atomgram.messenger.exoplayer.smoothstreaming;
 
 import android.net.Uri;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.chunk.FormatWrapper;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.UriUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.chunk.FormatWrapper;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.UriUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.util.List;
 import java.util.UUID;
 

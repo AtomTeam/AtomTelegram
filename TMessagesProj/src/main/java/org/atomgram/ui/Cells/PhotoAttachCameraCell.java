@@ -1,21 +1,21 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.R;
-import org.telegram.ui.Components.LayoutHelper;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.Components.LayoutHelper;
 
 @SuppressLint("NewApi")
 public class PhotoAttachCameraCell extends FrameLayout {

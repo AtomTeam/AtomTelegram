@@ -8,7 +8,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:333582466896:android:0431275a131b9c9a",
         "android_client_info": {
-          "package_name": "org.atomgram.messenger"
+          "package_name": "org.atomgram.messenger.beta"
         }
       },
       "oauth_client": [],

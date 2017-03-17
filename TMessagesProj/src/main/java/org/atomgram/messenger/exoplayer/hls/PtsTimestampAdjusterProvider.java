@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.hls;
+package org.atomgram.messenger.exoplayer.hls;
 
 import android.util.SparseArray;
-import org.telegram.messenger.exoplayer.extractor.ts.PtsTimestampAdjuster;
+import org.atomgram.messenger.exoplayer.extractor.ts.PtsTimestampAdjuster;
 
 /**
  * Provides {@link PtsTimestampAdjuster} instances for use during HLS playbacks.

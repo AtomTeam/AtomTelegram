@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Cells;
+package org.atomgram.ui.Cells;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -22,17 +22,17 @@ import android.text.style.URLSpan;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.ui.Components.LinkPath;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Components.TypefaceSpan;
-import org.telegram.ui.Components.URLSpanNoUnderline;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.Emoji;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.ui.Components.LinkPath;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Components.TypefaceSpan;
+import org.atomgram.ui.Components.URLSpanNoUnderline;
 
 public class BotHelpCell extends View {
 

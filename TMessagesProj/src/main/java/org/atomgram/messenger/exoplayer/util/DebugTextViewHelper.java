@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.util;
+package org.atomgram.messenger.exoplayer.util;
 
 import android.widget.TextView;
-import org.telegram.messenger.exoplayer.CodecCounters;
-import org.telegram.messenger.exoplayer.chunk.Format;
-import org.telegram.messenger.exoplayer.upstream.BandwidthMeter;
+import org.atomgram.messenger.exoplayer.CodecCounters;
+import org.atomgram.messenger.exoplayer.chunk.Format;
+import org.atomgram.messenger.exoplayer.upstream.BandwidthMeter;
 
 /**
  * A helper class for periodically updating debug information displayed by a {@link TextView}.

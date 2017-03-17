@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -41,47 +41,47 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildConfig;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.query.SharedMediaQuery;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.RequestDelegate;
-import org.telegram.tgnet.TLObject;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.ActionBarPopupWindow;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.BackDrawable;
-import org.telegram.ui.ActionBar.BottomSheet;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Adapters.BaseFragmentAdapter;
-import org.telegram.ui.Adapters.BaseSectionsAdapter;
-import org.telegram.ui.Cells.GreySectionCell;
-import org.telegram.ui.Cells.LoadingCell;
-import org.telegram.ui.Cells.SharedDocumentCell;
-import org.telegram.ui.Cells.SharedLinkCell;
-import org.telegram.ui.Cells.SharedMediaSectionCell;
-import org.telegram.ui.Cells.SharedPhotoVideoCell;
-import org.telegram.ui.Components.BackupImageView;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.NumberTextView;
-import org.telegram.ui.Components.PlayerView;
-import org.telegram.ui.Components.SectionsListView;
-import org.telegram.ui.Components.WebFrameLayout;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.BuildConfig;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MediaController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.browser.Browser;
+import org.atomgram.messenger.query.SharedMediaQuery;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.FileLoader;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.RequestDelegate;
+import org.atomgram.tgnet.TLObject;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.ActionBarPopupWindow;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.BackDrawable;
+import org.atomgram.ui.ActionBar.BottomSheet;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Adapters.BaseFragmentAdapter;
+import org.atomgram.ui.Adapters.BaseSectionsAdapter;
+import org.atomgram.ui.Cells.GreySectionCell;
+import org.atomgram.ui.Cells.LoadingCell;
+import org.atomgram.ui.Cells.SharedDocumentCell;
+import org.atomgram.ui.Cells.SharedLinkCell;
+import org.atomgram.ui.Cells.SharedMediaSectionCell;
+import org.atomgram.ui.Cells.SharedPhotoVideoCell;
+import org.atomgram.ui.Components.BackupImageView;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.NumberTextView;
+import org.atomgram.ui.Components.PlayerView;
+import org.atomgram.ui.Components.SectionsListView;
+import org.atomgram.ui.Components.WebFrameLayout;
 
 import java.io.File;
 import java.util.ArrayList;

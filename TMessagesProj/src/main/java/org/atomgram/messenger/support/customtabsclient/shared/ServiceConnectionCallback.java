@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package org.telegram.messenger.support.customtabsclient.shared;
+package org.atomgram.messenger.support.customtabsclient.shared;
 
-import org.telegram.messenger.support.customtabs.CustomTabsClient;
+import org.atomgram.messenger.support.customtabs.CustomTabsClient;
 
 /**
  * Callback for events when connecting and disconnecting from Custom Tabs Service.

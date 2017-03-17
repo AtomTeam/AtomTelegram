@@ -15,7 +15,7 @@
  */
 
 
-package org.telegram.messenger.support.widget;
+package org.atomgram.messenger.support.widget;
 
 import android.content.Context;
 import android.database.Observable;
@@ -47,8 +47,8 @@ import android.support.v4.view.accessibility.AccessibilityRecordCompat;
 import android.support.v4.widget.EdgeEffectCompat;
 import android.support.v4.widget.ScrollerCompat;
 
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.support.widget.RecyclerView.ItemAnimator.ItemHolderInfo;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.support.widget.RecyclerView.ItemAnimator.ItemHolderInfo;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
@@ -75,8 +75,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.telegram.messenger.support.widget.AdapterHelper.Callback;
-import static org.telegram.messenger.support.widget.AdapterHelper.UpdateOp;
+import static org.atomgram.messenger.support.widget.AdapterHelper.Callback;
+import static org.atomgram.messenger.support.widget.AdapterHelper.UpdateOp;
 
 /**
  * A flexible view for providing a limited window into a large data set.

@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
-import org.telegram.messenger.exoplayer.ExoPlayer.ExoPlayerComponent;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.ExoPlayer.ExoPlayerComponent;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 
 /**
  * Renders a single component of media.

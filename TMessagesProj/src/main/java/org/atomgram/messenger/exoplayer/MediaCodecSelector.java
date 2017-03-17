@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.media.MediaCodec;
-import org.telegram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
 
 /**
  * Selector of {@link MediaCodec} instances.

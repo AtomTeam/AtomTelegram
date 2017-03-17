@@ -1,10 +1,10 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.R;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.R;
 
 public interface Brush {
 

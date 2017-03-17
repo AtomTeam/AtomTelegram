@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.upstream.cache;
+package org.atomgram.messenger.exoplayer.upstream.cache;
 
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,22 +1,22 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui.Adapters;
+package org.atomgram.ui.Adapters;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.Utilities;
-import org.telegram.ui.Adapters.CountryAdapter.Country;
-import org.telegram.ui.Cells.TextSettingsCell;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.ui.Adapters.CountryAdapter.Country;
+import org.atomgram.ui.Cells.TextSettingsCell;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.annotation.TargetApi;
 import android.media.MediaCodec;
@@ -22,14 +22,14 @@ import android.media.MediaCodec.CryptoException;
 import android.media.MediaCrypto;
 import android.os.Handler;
 import android.os.SystemClock;
-import org.telegram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
-import org.telegram.messenger.exoplayer.drm.DrmInitData;
-import org.telegram.messenger.exoplayer.drm.DrmSessionManager;
-import org.telegram.messenger.exoplayer.drm.FrameworkMediaCrypto;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.NalUnitUtil;
-import org.telegram.messenger.exoplayer.util.TraceUtil;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.MediaCodecUtil.DecoderQueryException;
+import org.atomgram.messenger.exoplayer.drm.DrmInitData;
+import org.atomgram.messenger.exoplayer.drm.DrmSessionManager;
+import org.atomgram.messenger.exoplayer.drm.FrameworkMediaCrypto;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.NalUnitUtil;
+import org.atomgram.messenger.exoplayer.util.TraceUtil;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -129,7 +129,7 @@ public abstract class MediaCodecTrackRenderer extends SampleSourceTrackRenderer 
 
     private static String buildCustomDiagnosticInfo(int errorCode) {
       String sign = errorCode < 0 ? "neg_" : "";
-      return "org.telegram.messenger.exoplayer.MediaCodecTrackRenderer_" + sign + Math.abs(errorCode);
+      return "org.atomgram.messenger.exoplayer.MediaCodecTrackRenderer_" + sign + Math.abs(errorCode);
     }
 
   }

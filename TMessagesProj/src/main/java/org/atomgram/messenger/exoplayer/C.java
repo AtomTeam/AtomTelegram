@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.media.AudioFormat;
 import android.media.MediaCodec;
 import android.media.MediaExtractor;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.util.Util;
 
 /**
  * Defines constants that are generally useful throughout the library.

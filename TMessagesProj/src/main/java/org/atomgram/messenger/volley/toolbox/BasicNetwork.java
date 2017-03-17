@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley.toolbox;
+package org.atomgram.messenger.volley.toolbox;
 
 import android.os.SystemClock;
 
-import org.telegram.messenger.volley.AuthFailureError;
-import org.telegram.messenger.volley.Cache;
-import org.telegram.messenger.volley.Cache.Entry;
-import org.telegram.messenger.volley.Network;
-import org.telegram.messenger.volley.NetworkError;
-import org.telegram.messenger.volley.NetworkResponse;
-import org.telegram.messenger.volley.NoConnectionError;
-import org.telegram.messenger.volley.Request;
-import org.telegram.messenger.volley.RetryPolicy;
-import org.telegram.messenger.volley.ServerError;
-import org.telegram.messenger.volley.TimeoutError;
-import org.telegram.messenger.volley.VolleyError;
-import org.telegram.messenger.volley.VolleyLog;
+import org.atomgram.messenger.volley.AuthFailureError;
+import org.atomgram.messenger.volley.Cache;
+import org.atomgram.messenger.volley.Cache.Entry;
+import org.atomgram.messenger.volley.Network;
+import org.atomgram.messenger.volley.NetworkError;
+import org.atomgram.messenger.volley.NetworkResponse;
+import org.atomgram.messenger.volley.NoConnectionError;
+import org.atomgram.messenger.volley.Request;
+import org.atomgram.messenger.volley.RetryPolicy;
+import org.atomgram.messenger.volley.ServerError;
+import org.atomgram.messenger.volley.TimeoutError;
+import org.atomgram.messenger.volley.VolleyError;
+import org.atomgram.messenger.volley.VolleyLog;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;

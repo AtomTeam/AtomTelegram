@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.drm;
+package org.atomgram.messenger.exoplayer.drm;
 
 import android.annotation.TargetApi;
 import android.media.MediaCrypto;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 
 /**
  * An {@link ExoMediaCrypto} implementation that wraps the framework {@link MediaCrypto}.

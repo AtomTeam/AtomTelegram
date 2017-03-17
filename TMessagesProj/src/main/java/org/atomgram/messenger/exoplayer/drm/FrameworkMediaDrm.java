@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.drm;
+package org.atomgram.messenger.exoplayer.drm;
 
 import android.annotation.TargetApi;
 import android.media.DeniedByServerException;
@@ -23,7 +23,7 @@ import android.media.MediaDrm;
 import android.media.NotProvisionedException;
 import android.media.ResourceBusyException;
 import android.media.UnsupportedSchemeException;
-import org.telegram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Assertions;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;

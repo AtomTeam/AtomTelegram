@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.widget.util;
+package org.atomgram.messenger.support.widget.util;
 
-import org.telegram.messenger.support.util.SortedList;
-import org.telegram.messenger.support.widget.RecyclerView;
+import org.atomgram.messenger.support.util.SortedList;
+import org.atomgram.messenger.support.widget.RecyclerView;
 
 /**
  * A {@link SortedList.Callback} implementation that can bind a {@link SortedList} to a

@@ -1,10 +1,10 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.Color;
 import android.opengl.GLES20;
 import android.util.Log;
 
-import org.telegram.messenger.FileLog;
+import org.atomgram.messenger.FileLog;
 
 import java.util.HashMap;
 import java.util.Map;

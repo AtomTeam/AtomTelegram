@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer;
+package org.atomgram.messenger.exoplayer;
 
 import android.os.SystemClock;
-import org.telegram.messenger.exoplayer.util.Clock;
+import org.atomgram.messenger.exoplayer.util.Clock;
 
 /**
  * A container to store a start and end time in microseconds.

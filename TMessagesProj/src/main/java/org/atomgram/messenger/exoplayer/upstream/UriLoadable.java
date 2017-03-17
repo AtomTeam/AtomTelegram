@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.upstream;
+package org.atomgram.messenger.exoplayer.upstream;
 
 import android.net.Uri;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.upstream.Loader.Loadable;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.upstream.Loader.Loadable;
 import java.io.IOException;
 import java.io.InputStream;
 

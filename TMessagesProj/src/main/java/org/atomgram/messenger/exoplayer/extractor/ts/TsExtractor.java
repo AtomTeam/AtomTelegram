@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.ts;
+package org.atomgram.messenger.exoplayer.extractor.ts;
 
 import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.extractor.DummyTrackOutput;
-import org.telegram.messenger.exoplayer.extractor.Extractor;
-import org.telegram.messenger.exoplayer.extractor.ExtractorInput;
-import org.telegram.messenger.exoplayer.extractor.ExtractorOutput;
-import org.telegram.messenger.exoplayer.extractor.PositionHolder;
-import org.telegram.messenger.exoplayer.extractor.SeekMap;
-import org.telegram.messenger.exoplayer.util.ParsableBitArray;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.extractor.DummyTrackOutput;
+import org.atomgram.messenger.exoplayer.extractor.Extractor;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorInput;
+import org.atomgram.messenger.exoplayer.extractor.ExtractorOutput;
+import org.atomgram.messenger.exoplayer.extractor.PositionHolder;
+import org.atomgram.messenger.exoplayer.extractor.SeekMap;
+import org.atomgram.messenger.exoplayer.util.ParsableBitArray;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 
 /**

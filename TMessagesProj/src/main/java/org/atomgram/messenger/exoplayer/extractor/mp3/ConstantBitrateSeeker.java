@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.mp3;
+package org.atomgram.messenger.exoplayer.extractor.mp3;
 
-import org.telegram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.C;
 
 /**
  * MP3 seeker that doesn't rely on metadata and seeks assuming the source has a constant bitrate.

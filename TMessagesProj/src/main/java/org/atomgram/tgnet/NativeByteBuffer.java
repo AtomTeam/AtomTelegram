@@ -1,6 +1,6 @@
-package org.telegram.tgnet;
+package org.atomgram.tgnet;
 
-import org.telegram.messenger.FileLog;
+import org.atomgram.messenger.FileLog;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

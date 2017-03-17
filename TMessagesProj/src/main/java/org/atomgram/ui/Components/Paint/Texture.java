@@ -1,10 +1,10 @@
-package org.telegram.ui.Components.Paint;
+package org.atomgram.ui.Components.Paint;
 
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
-import org.telegram.ui.Components.Size;
+import org.atomgram.ui.Components.Size;
 
 public class Texture {
 

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.extractor.mp4;
+package org.atomgram.messenger.exoplayer.extractor.mp4;
 
 import android.util.Log;
 import android.util.Pair;
-import org.telegram.messenger.exoplayer.util.ParsableByteArray;
+import org.atomgram.messenger.exoplayer.util.ParsableByteArray;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 

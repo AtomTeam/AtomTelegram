@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.support.customtabs;
+package org.atomgram.messenger.support.customtabs;
 
 import android.os.Binder;
 import android.os.Bundle;

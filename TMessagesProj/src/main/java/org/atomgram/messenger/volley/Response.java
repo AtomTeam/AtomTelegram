@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.telegram.messenger.volley;
+package org.atomgram.messenger.volley;
 
 /**
  * Encapsulates a parsed response for delivery.

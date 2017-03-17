@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.webvtt;
+package org.atomgram.messenger.exoplayer.text.webvtt;
 
 import android.text.Layout.Alignment;
 import android.util.Log;
-import org.telegram.messenger.exoplayer.text.Cue;
+import org.atomgram.messenger.exoplayer.text.Cue;
 
 /**
  * A representation of a WebVTT cue.

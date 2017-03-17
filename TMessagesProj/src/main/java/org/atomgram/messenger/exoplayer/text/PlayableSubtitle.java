@@ -1,4 +1,4 @@
-package org.telegram.messenger.exoplayer.text;
+package org.atomgram.messenger.exoplayer.text;
 
 /*
  * Copyright (C) 2014 The Android Open Source Project

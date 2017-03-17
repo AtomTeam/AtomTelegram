@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.smoothstreaming;
+package org.atomgram.messenger.exoplayer.smoothstreaming;
 
 import android.content.Context;
-import org.telegram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
-import org.telegram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.StreamElement;
-import org.telegram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.TrackElement;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.chunk.VideoFormatSelectorUtil;
+import org.atomgram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.StreamElement;
+import org.atomgram.messenger.exoplayer.smoothstreaming.SmoothStreamingManifest.TrackElement;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.IOException;
 import java.util.Arrays;
 

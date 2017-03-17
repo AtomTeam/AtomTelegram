@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.upstream.cache;
+package org.atomgram.messenger.exoplayer.upstream.cache;
 
 import android.net.Uri;
 import android.util.Log;
-import org.telegram.messenger.exoplayer.C;
-import org.telegram.messenger.exoplayer.upstream.DataSink;
-import org.telegram.messenger.exoplayer.upstream.DataSource;
-import org.telegram.messenger.exoplayer.upstream.DataSpec;
-import org.telegram.messenger.exoplayer.upstream.FileDataSource;
-import org.telegram.messenger.exoplayer.upstream.TeeDataSource;
-import org.telegram.messenger.exoplayer.upstream.cache.CacheDataSink.CacheDataSinkException;
+import org.atomgram.messenger.exoplayer.C;
+import org.atomgram.messenger.exoplayer.upstream.DataSink;
+import org.atomgram.messenger.exoplayer.upstream.DataSource;
+import org.atomgram.messenger.exoplayer.upstream.DataSpec;
+import org.atomgram.messenger.exoplayer.upstream.FileDataSource;
+import org.atomgram.messenger.exoplayer.upstream.TeeDataSource;
+import org.atomgram.messenger.exoplayer.upstream.cache.CacheDataSink.CacheDataSinkException;
 import java.io.IOException;
 import java.io.InterruptedIOException;
 

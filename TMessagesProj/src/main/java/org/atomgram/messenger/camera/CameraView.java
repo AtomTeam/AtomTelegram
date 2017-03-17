@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger.camera;
+package org.atomgram.messenger.camera;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -18,7 +18,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.atomgram.messenger.AndroidUtilities;
 
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
@@ -26,7 +26,7 @@ import java.util.concurrent.Semaphore;
 @SuppressLint("NewApi")
 public class CameraView extends FrameLayout implements TextureView.SurfaceTextureListener {
 
-    private org.telegram.messenger.camera.Size previewSize;
+    private org.atomgram.messenger.camera.Size previewSize;
     private boolean mirror;
     private TextureView textureView;
     private CameraSession cameraSession;
@@ -98,7 +98,7 @@ public class CameraView extends FrameLayout implements TextureView.SurfaceTextur
         float size4to3 = 4.0f / 3.0f;
         float size16to9 = 16.0f / 9.0f;
         float screenSize = (float) Math.max(AndroidUtilities.displaySize.x, AndroidUtilities.displaySize.y) / Math.min(AndroidUtilities.displaySize.x, AndroidUtilities.displaySize.y);
-        org.telegram.messenger.camera.Size pictureSize;
+        org.atomgram.messenger.camera.Size pictureSize;
         if (Math.abs(screenSize - size4to3) < 0.1f) {
             pictureSize = new Size(4, 3);
         } else {

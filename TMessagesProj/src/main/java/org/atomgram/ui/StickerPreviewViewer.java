@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,15 +23,15 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.FileLog;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Cells.ContextLinkCell;
-import org.telegram.ui.Cells.StickerCell;
-import org.telegram.ui.Cells.StickerEmojiCell;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.RecyclerListView;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.ImageReceiver;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Cells.ContextLinkCell;
+import org.atomgram.ui.Cells.StickerCell;
+import org.atomgram.ui.Cells.StickerEmojiCell;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.RecyclerListView;
 
 public class StickerPreviewViewer {
 

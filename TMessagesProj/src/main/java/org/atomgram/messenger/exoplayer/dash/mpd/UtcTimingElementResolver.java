@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash.mpd;
+package org.atomgram.messenger.exoplayer.dash.mpd;
 
 import android.os.SystemClock;
-import org.telegram.messenger.exoplayer.ParserException;
-import org.telegram.messenger.exoplayer.upstream.Loader;
-import org.telegram.messenger.exoplayer.upstream.Loader.Loadable;
-import org.telegram.messenger.exoplayer.upstream.UriDataSource;
-import org.telegram.messenger.exoplayer.upstream.UriLoadable;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.Util;
+import org.atomgram.messenger.exoplayer.ParserException;
+import org.atomgram.messenger.exoplayer.upstream.Loader;
+import org.atomgram.messenger.exoplayer.upstream.Loader.Loadable;
+import org.atomgram.messenger.exoplayer.upstream.UriDataSource;
+import org.atomgram.messenger.exoplayer.upstream.UriLoadable;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.Util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

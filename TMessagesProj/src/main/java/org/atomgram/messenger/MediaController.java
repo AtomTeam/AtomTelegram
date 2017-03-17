@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 1.3.x.
+ * This is the source code of Atomgram for Android v. 1.3.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -51,16 +51,16 @@ import android.provider.OpenableColumns;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
-import org.telegram.messenger.audioinfo.AudioInfo;
-import org.telegram.messenger.query.SharedMediaQuery;
-import org.telegram.messenger.video.InputSurface;
-import org.telegram.messenger.video.MP4Builder;
-import org.telegram.messenger.video.Mp4Movie;
-import org.telegram.messenger.video.OutputSurface;
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.ChatActivity;
-import org.telegram.ui.PhotoViewer;
+import org.atomgram.messenger.audioinfo.AudioInfo;
+import org.atomgram.messenger.query.SharedMediaQuery;
+import org.atomgram.messenger.video.InputSurface;
+import org.atomgram.messenger.video.MP4Builder;
+import org.atomgram.messenger.video.Mp4Movie;
+import org.atomgram.messenger.video.OutputSurface;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.PhotoViewer;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -3081,10 +3081,10 @@ public class MediaController implements AudioManager.OnAudioFocusChangeListener,
 
     public void checkSaveToGalleryFiles() {
         try {
-            File telegramPath = new File(Environment.getExternalStorageDirectory(), "Telegram");
-            File imagePath = new File(telegramPath, "Telegram Images");
+            File AtomgramPath = new File(Environment.getExternalStorageDirectory(), "Atomgram");
+            File imagePath = new File(AtomgramPath, "Atomgram Images");
             imagePath.mkdir();
-            File videoPath = new File(telegramPath, "Telegram Video");
+            File videoPath = new File(AtomgramPath, "Atomgram Video");
             videoPath.mkdir();
 
             if (saveToGallery) {

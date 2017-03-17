@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.messenger;
+package org.atomgram.messenger;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -32,10 +32,10 @@ import android.util.Base64;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 
-import org.telegram.tgnet.ConnectionsManager;
-import org.telegram.tgnet.SerializedData;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.ui.Components.ForegroundDetector;
+import org.atomgram.tgnet.ConnectionsManager;
+import org.atomgram.tgnet.SerializedData;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.ui.Components.ForegroundDetector;
 
 import java.io.File;
 import java.io.RandomAccessFile;
@@ -100,10 +100,10 @@ public class ApplicationLoader extends Application {
                     try {
                         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
                         int selectedBackground = preferences.getInt("selectedBackground", 1000001);
-                        selectedColor = preferences.getInt("selectedColor", 0);
-                        serviceMessageColor = preferences.getInt("serviceMessageColor", 0);
-                        serviceSelectedMessageColor = preferences.getInt("serviceSelectedMessageColor", 0);
-                        if (selectedColor == 0) {
+                        selectedColor = preferences.getInt("selectedColor", 1);
+                        serviceMessageColor = preferences.getInt("serviceMessageColor", 1);
+                        serviceSelectedMessageColor = preferences.getInt("serviceSelectedMessageColor", 1);
+                        if (selectedColor == 1) {
                             if (selectedBackground == 1000001) {
                                 cachedWallpaper = applicationContext.getResources().getDrawable(R.drawable.background_hd);
                                 isCustomTheme = false;
@@ -205,7 +205,7 @@ public class ApplicationLoader extends Application {
         } catch (Exception e) {
             FileLog.e("tmessages", e);
         }
-        return new File("/data/data/org.telegram.messenger/files");
+        return new File("/data/data/org.atomgram.messenger/files");
     }
 
     public static void postInitApplication() {

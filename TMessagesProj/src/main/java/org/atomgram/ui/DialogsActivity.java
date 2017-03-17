@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.Manifest;
 import android.animation.ObjectAnimator;
@@ -38,43 +38,43 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.query.SearchQuery;
-import org.telegram.messenger.query.StickersQuery;
-import org.telegram.messenger.support.widget.LinearLayoutManager;
-import org.telegram.messenger.support.widget.RecyclerView;
-import org.telegram.messenger.FileLog;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.ui.ActionBar.BottomSheet;
-import org.telegram.ui.Adapters.DialogsAdapter;
-import org.telegram.ui.Adapters.DialogsSearchAdapter;
-import org.telegram.ui.Cells.HintDialogCell;
-import org.telegram.ui.Cells.ProfileSearchCell;
-import org.telegram.ui.Cells.UserCell;
-import org.telegram.ui.Cells.DialogCell;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.ActionBarMenu;
-import org.telegram.ui.ActionBar.ActionBarMenuItem;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.ActionBar.MenuDrawable;
-import org.telegram.ui.Components.PlayerView;
-import org.telegram.ui.Components.EmptyTextProgressView;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.Components.RecyclerListView;
-import org.telegram.ui.ActionBar.Theme;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.BuildVars;
+import org.atomgram.messenger.ChatObject;
+import org.atomgram.messenger.DialogObject;
+import org.atomgram.messenger.ImageLoader;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.MessageObject;
+import org.atomgram.messenger.UserObject;
+import org.atomgram.messenger.query.SearchQuery;
+import org.atomgram.messenger.query.StickersQuery;
+import org.atomgram.messenger.support.widget.LinearLayoutManager;
+import org.atomgram.messenger.support.widget.RecyclerView;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.ContactsController;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.MessagesStorage;
+import org.atomgram.messenger.NotificationCenter;
+import org.atomgram.messenger.R;
+import org.atomgram.messenger.UserConfig;
+import org.atomgram.ui.ActionBar.BottomSheet;
+import org.atomgram.ui.Adapters.DialogsAdapter;
+import org.atomgram.ui.Adapters.DialogsSearchAdapter;
+import org.atomgram.ui.Cells.HintDialogCell;
+import org.atomgram.ui.Cells.ProfileSearchCell;
+import org.atomgram.ui.Cells.UserCell;
+import org.atomgram.ui.Cells.DialogCell;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.ActionBarMenu;
+import org.atomgram.ui.ActionBar.ActionBarMenuItem;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.ActionBar.MenuDrawable;
+import org.atomgram.ui.Components.PlayerView;
+import org.atomgram.ui.Components.EmptyTextProgressView;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.Components.RecyclerListView;
+import org.atomgram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.text.ttml;
+package org.atomgram.messenger.exoplayer.text.ttml;
 
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;

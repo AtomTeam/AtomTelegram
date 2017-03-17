@@ -1,12 +1,12 @@
 /*
- * This is the source code of Telegram for Android v. 3.x.x.
+ * This is the source code of Atomgram for Android v. 3.x.x.
  * It is licensed under GNU GPL v. 2 or later.
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright Nikolai Kudashov, 2013-2016.
  */
 
-package org.telegram.ui;
+package org.atomgram.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -27,20 +27,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.Utilities;
-import org.telegram.tgnet.TLRPC;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.ui.ActionBar.ActionBar;
-import org.telegram.ui.ActionBar.BaseFragment;
-import org.telegram.ui.Components.IdenticonDrawable;
-import org.telegram.ui.Components.LayoutHelper;
-import org.telegram.ui.ActionBar.Theme;
-import org.telegram.ui.Components.URLSpanReplacement;
+import org.atomgram.messenger.AndroidUtilities;
+import org.atomgram.messenger.FileLog;
+import org.atomgram.messenger.LocaleController;
+import org.atomgram.messenger.ApplicationLoader;
+import org.atomgram.messenger.Utilities;
+import org.atomgram.tgnet.TLRPC;
+import org.atomgram.messenger.MessagesController;
+import org.atomgram.messenger.R;
+import org.atomgram.ui.ActionBar.ActionBar;
+import org.atomgram.ui.ActionBar.BaseFragment;
+import org.atomgram.ui.Components.IdenticonDrawable;
+import org.atomgram.ui.Components.LayoutHelper;
+import org.atomgram.ui.ActionBar.Theme;
+import org.atomgram.ui.Components.URLSpanReplacement;
 
 public class IdenticonActivity extends BaseFragment {
 
@@ -142,7 +142,7 @@ public class IdenticonActivity extends BaseFragment {
                 hash.append("\n\n");
             }
             hash.append(AndroidUtilities.replaceTags(LocaleController.formatString("EncryptionKeyDescription", R.string.EncryptionKeyDescription, user.first_name, user.first_name)));
-            final String url = "telegram.org";
+            final String url = "Atomgram.org";
             int index = hash.toString().indexOf(url);
             if (index != -1) {
                 hash.setSpan(new URLSpanReplacement(LocaleController.getString("EncryptionKeyLink", R.string.EncryptionKeyLink)), index, index + url.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

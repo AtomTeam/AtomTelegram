@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.telegram.messenger.exoplayer.dash.mpd;
+package org.atomgram.messenger.exoplayer.dash.mpd;
 
 import android.net.Uri;
-import org.telegram.messenger.exoplayer.util.Assertions;
-import org.telegram.messenger.exoplayer.util.UriUtil;
+import org.atomgram.messenger.exoplayer.util.Assertions;
+import org.atomgram.messenger.exoplayer.util.UriUtil;
 
 /**
  * Defines a range of data located at a {@link Uri}.
