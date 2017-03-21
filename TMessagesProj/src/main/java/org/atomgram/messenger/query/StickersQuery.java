@@ -361,6 +361,7 @@ public class StickersQuery {
                 TLRPC.TL_messages_getRecentStickers req = new TLRPC.TL_messages_getRecentStickers();
                 req.hash = calcDocumentsHash(recentStickers[type]);
                 req.attached = type == TYPE_MASK;
+                //req.attached = type ==TYPE_IMAGE;
                 ConnectionsManager.getInstance().sendRequest(req, new RequestDelegate() {
                     @Override
                     public void run(TLObject response, TLRPC.TL_error error) {
@@ -480,6 +481,7 @@ public class StickersQuery {
             return;
         }
         int type = set.set.masks ? TYPE_MASK : TYPE_IMAGE;
+        //int type = TYPE_IMAGE;
         stickerSets[type].add(0, set);
         stickerSetsById.put(set.set.id, set);
         stickerSetsByName.put(set.set.short_name, set);
@@ -796,6 +798,9 @@ public class StickersQuery {
                 }
             });
         } else {
+            TLObject req = new TLRPC.TL_messages_getAllStickers();
+            final int hash = ((TLRPC.TL_messages_getAllStickers) req).hash = force ? 0 : loadHash[type];
+            /*
             TLObject req;
             final int hash;
             if (type == TYPE_IMAGE) {
@@ -804,7 +809,7 @@ public class StickersQuery {
             } else {
                 req = new TLRPC.TL_messages_getMaskStickers();
                 hash = ((TLRPC.TL_messages_getMaskStickers) req).hash = force ? 0 : loadHash[type];
-            }
+            }*/
             ConnectionsManager.getInstance().sendRequest(req, new RequestDelegate() {
                 @Override
                 public void run(final TLObject response, final TLRPC.TL_error error) {
