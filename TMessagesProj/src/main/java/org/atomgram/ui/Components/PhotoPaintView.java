@@ -896,7 +896,7 @@ public class PhotoPaintView extends FrameLayout implements EntityView.EntityView
     private void updateStickersTitle() {
         if (stickersView == null || stickersView.getVisibility() != VISIBLE) {
             return;
-        }/*
+        }/*//
         switch (stickersView.getCurrentType()) {
             case StickersQuery.TYPE_IMAGE:
                 actionBar.setTitle(LocaleController.getString("PaintStickers", R.string.PaintStickers));

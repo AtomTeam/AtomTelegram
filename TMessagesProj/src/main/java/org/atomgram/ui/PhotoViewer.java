@@ -1165,7 +1165,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
         containerView.setFocusable(false);
         windowView.addView(containerView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.MATCH_PARENT, Gravity.TOP | Gravity.LEFT));
         if (Build.VERSION.SDK_INT >= 21) {
-            //containerView.setFitsSystemWindows(true);
+            containerView.setFitsSystemWindows(true);
             containerView.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
                 @SuppressLint("NewApi")
                 @Override
@@ -1175,7 +1175,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
                     return insets.consumeSystemWindowInsets();
                 }
             });
-            //containerView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);*/
+            containerView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
         windowLayoutParams = new WindowManager.LayoutParams();
@@ -1183,7 +1183,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
         windowLayoutParams.format = PixelFormat.TRANSLUCENT;
         windowLayoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
         windowLayoutParams.gravity = Gravity.TOP | Gravity.LEFT;
-        windowLayoutParams.type = WindowManager.LayoutParams.LAST_APPLICATION_WINDOW;
+        //windowLayoutParams.type = WindowManager.LayoutParams.LAST_APPLICATION_WINDOW;
         if (Build.VERSION.SDK_INT >= 21) {
             windowLayoutParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN |
                     WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR |
@@ -2165,7 +2165,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
         if (object instanceof MediaController.PhotoEntry) {
             caption = ((MediaController.PhotoEntry) object).caption;
         } else if (object instanceof TLRPC.BotInlineResult) {
-            //caption = ((TLRPC.BotInlineResult) object).send_message.caption;
+            caption = ((TLRPC.BotInlineResult) object).send_message.caption;
         } else if (object instanceof MediaController.SearchImage) {
             caption = ((MediaController.SearchImage) object).caption;
         }
@@ -2262,7 +2262,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             bitmap = photoFilterView.getBitmap();
         } else if (currentEditMode == 3) {
             bitmap = photoPaintView.getBitmap();
-            //stickers = photoPaintView.getMasks();
+            stickers = photoPaintView.getMasks();
         }
         if (bitmap != null) {
             TLRPC.PhotoSize size = ImageLoader.scaleAndSaveImage(bitmap, AndroidUtilities.getPhotoSize(), AndroidUtilities.getPhotoSize(), 80, false, 101, 101);
@@ -3303,7 +3303,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
                     currentPathObject = botInlineResult.content_url;
                     isVideo = botInlineResult.type.equals("video");
                 }
-                //caption = botInlineResult.send_message.caption;
+                caption = botInlineResult.send_message.caption;
             } else if (object instanceof MediaController.SearchImage) {
                 MediaController.SearchImage searchImage = (MediaController.SearchImage) object;
                 if (searchImage.document != null) {
@@ -3732,7 +3732,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
 
 
         try {
-            windowLayoutParams.type = WindowManager.LayoutParams.LAST_APPLICATION_WINDOW;
+            //windowLayoutParams.type = WindowManager.LayoutParams.LAST_APPLICATION_WINDOW;
             if (Build.VERSION.SDK_INT >= 21) {
                 windowLayoutParams.flags = WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN |
                         WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR |
