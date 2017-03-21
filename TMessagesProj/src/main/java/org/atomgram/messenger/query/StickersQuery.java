@@ -800,7 +800,7 @@ public class StickersQuery {
         } else {
             TLObject req = new TLRPC.TL_messages_getAllStickers();
             final int hash = ((TLRPC.TL_messages_getAllStickers) req).hash = force ? 0 : loadHash[type];
-            /*//
+            /*
             TLObject req;
             final int hash;
             if (type == TYPE_IMAGE) {
