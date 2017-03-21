@@ -2252,7 +2252,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             FileLog.e("tmessages", e);
         }
     }
-
+    //
     private void applyCurrentEditMode() {
         Bitmap bitmap = null;
         ArrayList<TLRPC.InputDocument> stickers = null;
@@ -2262,7 +2262,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             bitmap = photoFilterView.getBitmap();
         } else if (currentEditMode == 3) {
             bitmap = photoPaintView.getBitmap();
-            stickers = photoPaintView.getMasks();
+            //stickers = photoPaintView.getMasks();
         }
         if (bitmap != null) {
             TLRPC.PhotoSize size = ImageLoader.scaleAndSaveImage(bitmap, AndroidUtilities.getPhotoSize(), AndroidUtilities.getPhotoSize(), 80, false, 101, 101);

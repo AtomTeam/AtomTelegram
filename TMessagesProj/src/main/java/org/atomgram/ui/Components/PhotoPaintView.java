@@ -896,7 +896,7 @@ public class PhotoPaintView extends FrameLayout implements EntityView.EntityView
     private void updateStickersTitle() {
         if (stickersView == null || stickersView.getVisibility() != VISIBLE) {
             return;
-        }
+        }/*
         switch (stickersView.getCurrentType()) {
             case StickersQuery.TYPE_IMAGE:
                 actionBar.setTitle(LocaleController.getString("PaintStickers", R.string.PaintStickers));
@@ -904,7 +904,9 @@ public class PhotoPaintView extends FrameLayout implements EntityView.EntityView
             case StickersQuery.TYPE_MASK:
                 actionBar.setTitle(LocaleController.getString("Masks", R.string.Masks));
                 break;
-        }
+        }*/
+        actionBar.setTitle("Stickers");
+        //actionBar.setTitle(LocaleController.getString("PaintStickers", R.string.PaintStickers));
     }
 
     private void closeStickersView() {
