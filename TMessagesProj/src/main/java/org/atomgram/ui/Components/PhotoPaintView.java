@@ -115,6 +115,7 @@ public class PhotoPaintView extends FrameLayout implements EntityView.EntityView
 
     private Animator colorPickerAnimator;
 
+
     private DispatchQueue queue;
     private ArrayList<PhotoFace> faces;
 
