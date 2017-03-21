@@ -43,7 +43,8 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
 
     private ArrayList<TLRPC.TL_messages_stickerSet> stickerSets[] = new ArrayList[] {new ArrayList<>(), new ArrayList<>()};
     private ArrayList<TLRPC.Document> recentStickers[] = new ArrayList[] {new ArrayList<>(), new ArrayList<>()};
-    private int currentType = StickersQuery.TYPE_MASK;
+    //private int currentType = StickersQuery.TYPE_MASK;
+    private int currentType = StickersQuery.TYPE_IMAGE;
 
     private Listener listener;
     private StickersGridAdapter stickersGridAdapter;
@@ -64,7 +65,7 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
         setClickable(true);
 
         StickersQuery.checkStickers(StickersQuery.TYPE_IMAGE);
-        StickersQuery.checkStickers(StickersQuery.TYPE_MASK);
+        //StickersQuery.checkStickers(StickersQuery.TYPE_MASK);
         stickersGridView = new RecyclerListView(context) {
             @Override
             public boolean onInterceptTouchEvent(MotionEvent event) {
@@ -105,7 +106,7 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
                 }
                 TLRPC.Document document = cell.getSticker();
                 listener.onStickerSelected(document);
-                StickersQuery.addRecentSticker(StickersQuery.TYPE_MASK, document, (int) (System.currentTimeMillis() / 1000));
+                //StickersQuery.addRecentSticker(StickersQuery.TYPE_MASK, document, (int) (System.currentTimeMillis() / 1000));
                 MessagesController.getInstance().saveRecentSticker(document, true);
             }
         };
@@ -131,6 +132,7 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
             @Override
             public void onPageSelected(int page) {
                 if (page == 0) {
+                    /*
                     if (currentType == StickersQuery.TYPE_IMAGE) {
                         currentType = StickersQuery.TYPE_MASK;
                     } else {
@@ -139,6 +141,7 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
                     if (listener != null) {
                         listener.onTypeChanged();
                     }
+                    */
                     recentStickers[currentType] = StickersQuery.getRecentStickers(currentType);
                     stickersLayoutManager.scrollToPositionWithOffset(0, 0);
                     updateStickerTabs();
@@ -193,16 +196,17 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
         }
         recentTabBum = -2;
 
-        stickersTabOffset = 0;
+        stickersTabOffset = -1;
         int lastPosition = scrollSlidingTabStrip.getCurrentPosition();
-        scrollSlidingTabStrip.removeTabs();
+        scrollSlidingTabStrip.removeTabs(); /*
         if (currentType == StickersQuery.TYPE_IMAGE) {
             scrollSlidingTabStrip.addIconTab(R.drawable.ic_masks_msk1);
             stickersEmptyView.setText(LocaleController.getString("NoStickers", R.string.NoStickers));
         } else {
-            scrollSlidingTabStrip.addIconTab(R.drawable.ic_masks_sticker1);
+            //scrollSlidingTabStrip.addIconTab(R.drawable.ic_masks_sticker1);
             stickersEmptyView.setText(LocaleController.getString("NoMasks", R.string.NoMasks));
-        }
+        } */
+        stickersEmptyView.setText(LocaleController.getString("NoStickers", R.string.NoStickers)); //Added
 
         if (!recentStickers[currentType].isEmpty()) {
             recentTabBum = stickersTabOffset;
@@ -301,7 +305,7 @@ public class StickerMasksView extends FrameLayout implements NotificationCenter.
             reloadStickersAdapter();
             checkDocuments();
             StickersQuery.loadRecents(StickersQuery.TYPE_IMAGE, false, true);
-            StickersQuery.loadRecents(StickersQuery.TYPE_MASK, false, true);
+            //StickersQuery.loadRecents(StickersQuery.TYPE_MASK, false, true);
         }
     }
 
