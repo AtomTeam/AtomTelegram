@@ -533,8 +533,14 @@ public class MessagesStorage {
                     if (version == 36) {
                         database.executeFast("ALTER TABLE enc_chats ADD COLUMN in_seq_no INTEGER default 0").stepThis().dispose();
                         database.executeFast("PRAGMA user_version = 37").stepThis().dispose();
-                        //version = 37;
+//                        version = 37;
                     }
+//                    if (version == 37) {
+//                        //int defColor = 0xff000000;
+//                        database.executeFast("ALTER TABLE messages ADD COLUMN msg_color INTEGER default 0").stepThis().dispose();
+//                        database.executeFast("PRAGMA user_version = 38").stepThis().dispose();
+//                        version = 38;
+//                    }
                 } catch (Exception e) {
                     FileLog.e("tmessages", e);
                 }

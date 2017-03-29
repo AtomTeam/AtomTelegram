@@ -77,6 +77,7 @@ import org.atomgram.messenger.AnimatorListenerAdapterProxy;
 import org.atomgram.messenger.ApplicationLoader;
 import org.atomgram.ui.ActionBar.Theme;
 import org.atomgram.ui.ChatActivity;
+import org.atomgram.ui.Components.Paint.Views.ColorPicker;
 import org.atomgram.ui.DialogsActivity;
 import org.atomgram.ui.StickersActivity;
 
@@ -509,7 +510,7 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
         }
     }
 
-    public ChatActivityEnterView(Activity context, SizeNotifierFrameLayout parent, ChatActivity fragment, boolean isChat) {
+    public ChatActivityEnterView(final Activity context, SizeNotifierFrameLayout parent, ChatActivity fragment, boolean isChat) {
         super(context);
         backgroundDrawable = context.getResources().getDrawable(R.drawable.compose_panel);
         dotDrawable = context.getResources().getDrawable(R.drawable.bluecircle);
@@ -998,6 +999,18 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
         sendButton.setScaleY(0.1f);
         sendButton.setAlpha(0.0f);
         sendButtonContainer.addView(sendButton, LayoutHelper.createFrame(48, 48));
+        sendButton.setOnLongClickListener(new OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                new ColorPickerDialog(context, new ColorPickerDialog.OnColorChangedListener() {
+                    @Override
+                    public void colorChanged(int color) {
+                        sendMessage(color);
+                    }
+                }, 0xFF000000).show();
+                return true;
+            }
+        });
         sendButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1352,6 +1365,10 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
     }
 
     private void sendMessage() {
+        this.sendMessage(0);
+    }
+
+    private void sendMessage(int color) {
         if (parentFragment != null) {
             String action;
             TLRPC.Chat currentChat;
@@ -1383,7 +1400,7 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
             return;
         }
         CharSequence message = messageEditText.getText();
-        if (processSendingText(message)) {
+        if (processSendingText(message, color)) {
             messageEditText.setText("");
             lastTypingTimeSend = 0;
             if (delegate != null) {
@@ -1411,14 +1428,14 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
         }
     }
 
-    public boolean processSendingText(CharSequence text) {
+    public boolean processSendingText(CharSequence text, int color) {
         text = AndroidUtilities.getTrimmedString(text);
         if (text.length() != 0) {
             int count = (int) Math.ceil(text.length() / 4096.0f);
             for (int a = 0; a < count; a++) {
                 CharSequence[] message = new CharSequence[] {text.subSequence(a * 4096, Math.min((a + 1) * 4096, text.length()))};
                 ArrayList<TLRPC.MessageEntity> entities = MessagesQuery.getEntities(message);
-                SendMessagesHelper.getInstance().sendMessage(message[0].toString(), dialog_id, replyingMessageObject, messageWebPage, messageWebPageSearch, entities, null, null);
+                SendMessagesHelper.getInstance().sendMessage(message[0].toString(), dialog_id, replyingMessageObject, messageWebPage, messageWebPageSearch, entities, null, null, color);
             }
             return true;
         }
@@ -1809,9 +1826,9 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
         } else {
             TLRPC.User user = messageObject != null && (int) dialog_id < 0 ? MessagesController.getInstance().getUser(messageObject.messageOwner.from_id) : null;
             if ((botCount != 1 || username) && user != null && user.bot && !command.contains("@")) {
-                SendMessagesHelper.getInstance().sendMessage(String.format(Locale.US, "%s@%s", command, user.username), dialog_id, null, null, false, null, null, null);
+                SendMessagesHelper.getInstance().sendMessage(String.format(Locale.US, "%s@%s", command, user.username), dialog_id, null, null, false, null, null, null, 0);
             } else {
-                SendMessagesHelper.getInstance().sendMessage(command, dialog_id, null, null, false, null, null, null);
+                SendMessagesHelper.getInstance().sendMessage(command, dialog_id, null, null, false, null, null, null, 0);
             }
         }
     }
@@ -2103,7 +2120,8 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
             return;
         }
         if (button instanceof TLRPC.TL_keyboardButton) {
-            SendMessagesHelper.getInstance().sendMessage(button.text, dialog_id, replyMessageObject, null, false, null, null, null);
+
+            SendMessagesHelper.getInstance().sendMessage(button.text, dialog_id, replyMessageObject, null, false, null, null, null, 0);
         } else if (button instanceof TLRPC.TL_keyboardButtonUrl) {
             parentFragment.showOpenUrlAlert(button.url, true);
         } else if (button instanceof TLRPC.TL_keyboardButtonRequestPhone) {

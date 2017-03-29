@@ -3420,6 +3420,14 @@ public class MessagesController implements NotificationCenter.NotificationCenter
                             continue;
                         }
                     }
+                    ///
+                    message.colored = (message.flags & message.COLOR_FLAG) != 0;
+                    if(message.colored) {
+                        int clr = (message.flags >> 16) & 0xFF;
+                        message.msg_color = (clr & 3) * 85 + (clr & 12) * 5440 + (clr & 48) * 348160 +
+                                (clr & 192) * 22282240;
+                    }
+                    ///
                     MessageObject messageObject = new MessageObject(message, usersDict, chatsDict, false);
                     new_dialogMessage.put(messageObject.getDialogId(), messageObject);
                 }
@@ -5585,9 +5593,21 @@ public class MessagesController implements NotificationCenter.NotificationCenter
                     message.media_unread = updates.media_unread;
                     message.entities = updates.entities;
                     message.message = updates.message;
+
                     message.date = updates.date;
                     message.via_bot_id = updates.via_bot_id;
                     message.flags = updates.flags | TLRPC.MESSAGE_FLAG_HAS_FROM_ID;
+
+                    ///
+                    message.colored = (message.flags & message.COLOR_FLAG) != 0;
+                    if(message.colored) {
+                        int clr = (message.flags >> 16) & 0xFF;
+                        message.msg_color = (clr & 3) * 85 + (clr & 12) * 5440 + (clr & 48) * 348160 +
+                                (clr & 192) * 22282240;
+                    }
+                    ///
+                    System.out.println(message.msg_color + " " + message.message);
+
                     message.reply_to_msg_id = updates.reply_to_msg_id;
                     message.media = new TLRPC.TL_messageMediaEmpty();
 
@@ -6114,6 +6134,15 @@ public class MessagesController implements NotificationCenter.NotificationCenter
                     }
                 }
 
+                ///
+                message.colored = (message.flags & message.COLOR_FLAG) != 0;
+                if(message.colored) {
+                    int clr = (message.flags >> 16) & 0xFF;
+                    message.msg_color = (clr & 3) * 85 + (clr & 12) * 5440 + (clr & 48) * 348160 +
+                            (clr & 192) * 22282240;
+                }
+                ///
+                System.out.println("Process update array " + message.msg_color);
                 messagesArr.add(message);
                 ImageLoader.saveMessageThumbs(message);
                 int clientUserId = UserConfig.getClientUserId();
@@ -7153,6 +7182,14 @@ public class MessagesController implements NotificationCenter.NotificationCenter
         boolean updateRating = false;
         for (int a = 0; a < messages.size(); a++) {
             MessageObject message = messages.get(a);
+            ///
+            message.messageOwner.colored = (message.messageOwner.flags & message.messageOwner.COLOR_FLAG) != 0;
+            if(message.messageOwner.colored) {
+                int clr = (message.messageOwner.flags >> 16) & 0xFF;
+                message.messageOwner.msg_color = (clr & 3) * 85 + (clr & 12) * 5440 + (clr & 48) * 348160 +
+                        (clr & 192) * 22282240;
+            }
+            ///
             if (lastMessage == null || (!isEncryptedChat && message.getId() > lastMessage.getId() || (isEncryptedChat || message.getId() < 0 && lastMessage.getId() < 0) && message.getId() < lastMessage.getId()) || message.messageOwner.date > lastMessage.messageOwner.date) {
                 lastMessage = message;
                 if (message.messageOwner.to_id.channel_id != 0) {
