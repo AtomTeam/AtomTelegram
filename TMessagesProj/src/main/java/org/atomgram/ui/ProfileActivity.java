@@ -397,7 +397,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                             MessagesController.getInstance().blockUser(user_id);
                         } else {
                             MessagesController.getInstance().unblockUser(user_id);
-                            SendMessagesHelper.getInstance().sendMessage("/start", user_id, null, null, false, null, null, null);
+                            SendMessagesHelper.getInstance().sendMessage("/start", user_id, null, null, false, null, null, null, 0);
                             finishFragment();
                         }
                     }

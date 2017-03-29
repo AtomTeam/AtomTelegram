@@ -1,14 +1,14 @@
-Executable : D:\AndroidSDK\ndk-bundle\ndk-build.cmd
+Executable : /opt/android-sdk/ndk-bundle/ndk-build
 arguments : 
 NDK_PROJECT_PATH=null
-APP_BUILD_SCRIPT=D:\AtomTG\TMessagesProj\jni\Android.mk
-NDK_APPLICATION_MK=D:\AtomTG\TMessagesProj\jni\Application.mk
+APP_BUILD_SCRIPT=/home/mds/innopolis/SA/AtomTelegram/TMessagesProj/jni/Android.mk
+NDK_APPLICATION_MK=/home/mds/innopolis/SA/AtomTelegram/TMessagesProj/jni/Application.mk
 APP_ABI=armeabi-v7a
 NDK_ALL_ABIS=armeabi-v7a
 NDK_DEBUG=1
 APP_PLATFORM=android-14
-NDK_OUT=D:/AtomTG/TMessagesProj/build/intermediates/ndkBuild/fat/debug/obj
-NDK_LIBS_OUT=D:\AtomTG\TMessagesProj\build\intermediates\ndkBuild\fat\debug\lib
+NDK_OUT=/home/mds/innopolis/SA/AtomTelegram/TMessagesProj/build/intermediates/ndkBuild/fat/debug/obj
+NDK_LIBS_OUT=/home/mds/innopolis/SA/AtomTelegram/TMessagesProj/build/intermediates/ndkBuild/fat/debug/lib
 NDK_APPLICATION_MK:=jni/Application.mk
 APP_PLATFORM:=android-14
 APP_SHORT_COMMANDS=false

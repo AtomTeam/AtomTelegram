@@ -102,7 +102,10 @@ public class MessageObject {
     public MessageObject(TLRPC.Message message, AbstractMap<Integer, TLRPC.User> users, AbstractMap<Integer, TLRPC.Chat> chats, boolean generateLayout) {
         if (textPaint == null) {
             textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-            textPaint.setColor(Theme.MSG_TEXT_COLOR);
+            if(message.colored)
+                textPaint.setColor(message.msg_color);
+            else
+                textPaint.setColor(Theme.MSG_TEXT_COLOR);
             textPaint.linkColor = Theme.MSG_LINK_TEXT_COLOR;
         }
         if (gameTextPaint == null) {
@@ -413,7 +416,16 @@ public class MessageObject {
             if (messageOwner.media instanceof TLRPC.TL_messageMediaGame) {
                 paint = gameTextPaint;
             } else {
-                paint = textPaint;
+                //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", message.msg_color) + " " + messageOwner.message);
+                if (message.colored || message.msg_color > 0) {
+                    paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                    paint.setColor(message.msg_color);
+                    paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
+                }
+                else {
+                    textPaint.setColor(Theme.MSG_TEXT_COLOR);
+                    paint = textPaint;
+                }
             }
             int[] emojiOnly = MessagesController.getInstance().allowBigEmoji ? new int[1] : null;
             messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false, emojiOnly);
@@ -462,7 +474,16 @@ public class MessageObject {
         if (messageOwner.media instanceof TLRPC.TL_messageMediaGame) {
             paint = gameTextPaint;
         } else {
-            paint = textPaint;
+            //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", messageOwner.msg_color) + " " + messageOwner.message);
+            if (messageOwner.colored || messageOwner.msg_color > 0) {
+                paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                paint.setColor(messageOwner.msg_color);
+                paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
+            }
+            else {
+                textPaint.setColor(Theme.MSG_TEXT_COLOR);
+                paint = textPaint;
+            }
         }
         messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false);
         generateLayout(fromUser);
@@ -677,7 +698,16 @@ public class MessageObject {
             if (messageOwner.media instanceof TLRPC.TL_messageMediaGame) {
                 paint = gameTextPaint;
             } else {
-                paint = textPaint;
+                //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", messageOwner.msg_color) + " " + messageOwner.message);
+                if (messageOwner.colored || messageOwner.msg_color > 0) {
+                    paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                    paint.setColor(messageOwner.msg_color);
+                    paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
+                }
+                else {
+                    textPaint.setColor(Theme.MSG_TEXT_COLOR);
+                    paint = textPaint;
+                }
             }
             messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false);
             generateLayout(fromUser);
@@ -1190,7 +1220,17 @@ public class MessageObject {
         if (messageOwner.media instanceof TLRPC.TL_messageMediaGame) {
             paint = gameTextPaint;
         } else {
-            paint = textPaint;
+            //text_coloring
+            //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", messageOwner.msg_color) + " " + messageOwner.message);
+            if (messageOwner.colored || messageOwner.msg_color > 0) {
+                paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                paint.setColor(messageOwner.msg_color);
+                paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
+            }
+            else {
+                textPaint.setColor(Theme.MSG_TEXT_COLOR);
+                paint = textPaint;
+            }
         }
         try {
             textLayout = new StaticLayout(messageText, paint, maxWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);

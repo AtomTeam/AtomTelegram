@@ -214,11 +214,11 @@ public class ShareAlert extends BottomSheet implements NotificationCenter.Notifi
                         ArrayList<MessageObject> arrayList = new ArrayList<>();
                         arrayList.add(sendingMessageObject);
                         for (HashMap.Entry<Long, TLRPC.TL_dialog> entry : selectedDialogs.entrySet()) {
-                            SendMessagesHelper.getInstance().sendMessage(arrayList, entry.getKey());
+                            SendMessagesHelper.getInstance().sendMessage(arrayList, entry.getKey(),0);
                         }
                     } else if (sendingText != null) {
                         for (HashMap.Entry<Long, TLRPC.TL_dialog> entry : selectedDialogs.entrySet()) {
-                            SendMessagesHelper.getInstance().sendMessage(sendingText, entry.getKey(), null, null, true, null, null, null);
+                            SendMessagesHelper.getInstance().sendMessage(sendingText, entry.getKey(), null, null, true, null, null, null, 0);
                         }
                     }
                     dismiss();

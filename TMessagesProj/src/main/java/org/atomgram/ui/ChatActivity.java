@@ -967,9 +967,9 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                     chatAttachAlert.init();
                     showDialog(chatAttachAlert);
                 } else if (id == bot_help) {
-                    SendMessagesHelper.getInstance().sendMessage("/help", dialog_id, null, null, false, null, null, null);
+                    SendMessagesHelper.getInstance().sendMessage("/help", dialog_id, null, null, false, null, null, null, 0);
                 } else if (id == bot_settings) {
-                    SendMessagesHelper.getInstance().sendMessage("/settings", dialog_id, null, null, false, null, null, null);
+                    SendMessagesHelper.getInstance().sendMessage("/settings", dialog_id, null, null, false, null, null, null, 0);
                 } else if (id == search) {
                     openSearchWithText(null);
                 }
@@ -2169,7 +2169,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                         }
                     } else if (object instanceof String) {
                         if (mentionsAdapter.isBotCommands()) {
-                            SendMessagesHelper.getInstance().sendMessage((String) object, dialog_id, null, null, false, null, null, null);
+                            SendMessagesHelper.getInstance().sendMessage((String) object, dialog_id, null, null, false, null, null, null, 0);
                             chatActivityEnterView.setFieldText("");
                         } else {
                             chatActivityEnterView.replaceWithText(start, len, object + " ");
@@ -2610,7 +2610,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                         if (botUserLast != null && botUserLast.length() != 0) {
                             MessagesController.getInstance().sendBotStart(currentUser, botUserLast);
                         } else {
-                            SendMessagesHelper.getInstance().sendMessage("/start", dialog_id, null, null, false, null, null, null);
+                            SendMessagesHelper.getInstance().sendMessage("/start", dialog_id, null, null, false, null, null, null, 0);
                         }
                     } else {
                         builder = new AlertDialog.Builder(getParentActivity());
@@ -2626,7 +2626,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                     if (botUser.length() != 0) {
                         MessagesController.getInstance().sendBotStart(currentUser, botUser);
                     } else {
-                        SendMessagesHelper.getInstance().sendMessage("/start", dialog_id, null, null, false, null, null, null);
+                        SendMessagesHelper.getInstance().sendMessage("/start", dialog_id, null, null, false, null, null, null, 0);
                     }
                     botUser = null;
                     updateBottomOverlay();
@@ -3516,7 +3516,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
             return;
         }
         if (!fromMyName) {
-            SendMessagesHelper.getInstance().sendMessage(arrayList, dialog_id);
+            SendMessagesHelper.getInstance().sendMessage(arrayList, dialog_id, 0);
         } else {
             for (MessageObject object : arrayList) {
                 SendMessagesHelper.getInstance().processForwardFromMyName(object, dialog_id);
@@ -4696,7 +4696,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
     }
 
     public boolean processSendingText(String text) {
-        return chatActivityEnterView.processSendingText(text);
+        return chatActivityEnterView.processSendingText(text, 0);
     }
 
     @Override
