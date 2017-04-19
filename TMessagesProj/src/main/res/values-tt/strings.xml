@@ -1524,4 +1524,6 @@
   <string name="formatterDay24H">HH:mm</string>
   <string name="formatterDay12H">h:mm a</string>
   <string name="formatDateAtTime">%1$s %2$s</string>
+    <string name="Mark">Тамгалау</string>
+  <string name="Unmark">Төшерергә билге</string>
 </resources>

@@ -11771,9 +11771,9 @@ public class TLRPC {
 				case 0x73924be0:
 					result = new TL_messageEntityPre();
 					break;
-				case 0xbb92ba95:
-					result = new TL_messageEntityUnknown();
-					break;
+//				case 0xbb92ba95:
+//					result = new TL_messageEntityUnknown();
+//					break;
 				case 0x6ed02538:
 					result = new TL_messageEntityUrl();
 					break;
@@ -11877,21 +11877,21 @@ public class TLRPC {
 		}
 	}
 
-	public static class TL_messageEntityUnknown extends MessageEntity {
-		public static int constructor = 0xbb92ba95;
-
-
-		public void readParams(AbstractSerializedData stream, boolean exception) {
-			offset = stream.readInt32(exception);
-			length = stream.readInt32(exception);
-		}
-
-		public void serializeToStream(AbstractSerializedData stream) {
-			stream.writeInt32(constructor);
-			stream.writeInt32(offset);
-			stream.writeInt32(length);
-		}
-	}
+//	public static class TL_messageEntityUnknown extends MessageEntity {
+//		public static int constructor = 0xbb92ba95;
+//
+//
+//		public void readParams(AbstractSerializedData stream, boolean exception) {
+//			offset = stream.readInt32(exception);
+//			length = stream.readInt32(exception);
+//		}
+//
+//		public void serializeToStream(AbstractSerializedData stream) {
+//			stream.writeInt32(constructor);
+//			stream.writeInt32(offset);
+//			stream.writeInt32(length);
+//		}
+//	}
 
 	public static class TL_messageEntityUrl extends MessageEntity {
 		public static int constructor = 0x6ed02538;
@@ -21457,10 +21457,11 @@ public class TLRPC {
 		public TL_messageFwdHeader fwd_from;
 		public int via_bot_id;
 		//message color
-		public int COLOR_FLAG = 268435456;
+		public static final int COLOR_FLAG = 134217728;
+		public static final int STARRED_COLOR = 0xFFFF0000;
 		public boolean colored = false;
 		public int msg_color = 0;
-		//
+		public int starred = 0;
 		//
         public int send_state = 0; //custom
         public int fwd_msg_id = 0; //custom
@@ -21606,12 +21607,14 @@ public class TLRPC {
 			post = (flags & 16384) != 0;
 			with_my_score = (flags & 1073741824) != 0;
 			//coloring
-			colored = (flags & COLOR_FLAG) != 0;
-			if(colored) {
-				int enc_color = (flags >> 16) & 0xFF;
-				msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440
-						+ (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
-			}
+			//			colored = (flags & COLOR_FLAG) != 0;
+			//			if(colored) {
+			//				int enc_color = (flags >> 16) & 0xFF;
+			//				msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440
+			//						+ (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
+
+							//System.out.println("(read)" + clr);
+			//			}
 			///
 			id = stream.readInt32(exception);
 			if ((flags & 256) != 0) {
@@ -21686,6 +21689,12 @@ public class TLRPC {
 			if ((flags & MESSAGE_FLAG_FWD) != 0 && id < 0) {
 				fwd_msg_id = stream.readInt32(exception);
 			}
+//			if (colored) {
+//				String clr = stream.readString(exception);
+//				msg_color = Integer.parseInt(clr);
+//				System.out.println("(read) clr = " + clr + " " + "msg_color = " + msg_color + " flags = " + flags + " " + message.substring(0,20));
+//
+//			}
 		}
 
 		public void serializeToStream(AbstractSerializedData stream) {
@@ -21698,14 +21707,14 @@ public class TLRPC {
 			flags = post ? (flags | 16384) : (flags &~ 16384);
 			flags = with_my_score ? (flags | 1073741824) : (flags &~ 1073741824);
 			///message coloring
-			flags = colored ? (flags | 268435456) : (flags &~ 268435456);
-			if(colored && msg_color != 0) {
-				int enc_color = ((((msg_color >> 24) & 0xFF / 85) << 6) +
-						((((msg_color >> 16) & 0xFF) / 85) << 4) +
-						((((msg_color >> 8) & 0xFF) / 85) << 2) +
-						(msg_color & 0xFF / 85)) << 16;
-				flags |= enc_color;
-			}
+			flags = colored ? (flags | COLOR_FLAG) : (flags &~ COLOR_FLAG);
+//			if(colored || msg_color != 0) {
+//				int enc_color = ((((msg_color >> 24) & 0xFF / 85) << 6) +
+//						((((msg_color >> 16) & 0xFF) / 85) << 4) +
+//						((((msg_color >> 8) & 0xFF) / 85) << 2) +
+//						(msg_color & 0xFF / 85)) << 16;
+//				flags |= enc_color;
+//			}
 			///
 			stream.writeInt32(flags);
 			stream.writeInt32(id);
@@ -21770,7 +21779,6 @@ public class TLRPC {
 			id = stream.readInt32(exception);
 
 
-			System.out.println("(TL_message_layer47) clr = ");
 			if ((flags & 256) != 0) {
 				from_id = stream.readInt32(exception);
 			}

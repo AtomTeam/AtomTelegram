@@ -24,6 +24,8 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
@@ -37,6 +39,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
@@ -7377,6 +7380,11 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                         }
                         items.add(LocaleController.getString("Forward", R.string.Forward));
                         options.add(2);
+                        if(selectedObject.messageOwner.starred == 0)
+                            items.add(LocaleController.getString("Mark", R.string.Mark));
+                        else
+                            items.add(LocaleController.getString("Unmark", R.string.Unmark));
+                        options.add(18);
                         if (allowUnpin) {
                             items.add(LocaleController.getString("UnpinMessage", R.string.UnpinMessage));
                             options.add(14);
@@ -7884,6 +7892,17 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                 }
                 break;
             }
+            case 18: {
+                TLRPC.Message message = selectedObject.messageOwner;
+                if(message.starred == 0)
+                    message.starred = 1;
+                else
+                    message.starred = 0;
+                MessagesStorage.getInstance().markMessageAsStarred(selectedObject.messageOwner);
+                selectedObject.checkLayout(true);
+                updateVisibleRows();
+                break;
+            }
         }
         selectedObject = null;
     }
@@ -7995,9 +8014,12 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                         view.setBackgroundColor(0);
                     }
                     disableSelection = true;
+                    ///
+
                 } else {
                     view.setBackgroundColor(0);
                 }
+
 
                 cell.setMessageObject(cell.getMessageObject());
                 cell.setCheckPressed(!disableSelection, disableSelection && selected);
@@ -8007,6 +8029,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                 } else {
                     cell.setHighlightedText(null);
                 }
+
             } else if (view instanceof ChatActionCell) {
                 ChatActionCell cell = (ChatActionCell) view;
                 cell.setMessageObject(cell.getMessageObject());

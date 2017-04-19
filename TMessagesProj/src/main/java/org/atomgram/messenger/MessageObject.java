@@ -8,6 +8,7 @@
 
 package org.atomgram.messenger;
 
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.text.Layout;
@@ -106,6 +107,10 @@ public class MessageObject {
                 textPaint.setColor(message.msg_color);
             else
                 textPaint.setColor(Theme.MSG_TEXT_COLOR);
+            ///STARRING
+            if(message.starred == 1) {
+                textPaint.setColor(TLRPC.Message.STARRED_COLOR);
+            }
             textPaint.linkColor = Theme.MSG_LINK_TEXT_COLOR;
         }
         if (gameTextPaint == null) {
@@ -412,7 +417,7 @@ public class MessageObject {
 
         generateCaption();
         if (generateLayout) {
-            TextPaint paint;
+            TextPaint paint = null;
             if (messageOwner.media instanceof TLRPC.TL_messageMediaGame) {
                 paint = gameTextPaint;
             } else {
@@ -425,6 +430,12 @@ public class MessageObject {
                 else {
                     textPaint.setColor(Theme.MSG_TEXT_COLOR);
                     paint = textPaint;
+                }
+                ///STARRED
+                if(message.starred == 1) {
+                    paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                    paint.setColor(TLRPC.Message.STARRED_COLOR);
+                    paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
                 }
             }
             int[] emojiOnly = MessagesController.getInstance().allowBigEmoji ? new int[1] : null;
@@ -483,6 +494,12 @@ public class MessageObject {
             else {
                 textPaint.setColor(Theme.MSG_TEXT_COLOR);
                 paint = textPaint;
+            }
+            ///STARRING
+            if(messageOwner.starred == 1) {
+                paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                paint.setColor(TLRPC.Message.STARRED_COLOR);
+                paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
             }
         }
         messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false);
@@ -679,6 +696,10 @@ public class MessageObject {
     }
 
     public boolean checkLayout() {
+        return checkLayout(false);
+    }
+
+    public boolean checkLayout(boolean forceLayout) {
         if (type != 0 || messageOwner.to_id == null || messageText == null || messageText.length() == 0) {
             return false;
         }
@@ -688,7 +709,7 @@ public class MessageObject {
                 layoutCreated = false;
             }
         }
-        if (!layoutCreated) {
+        if (!layoutCreated || forceLayout) {
             layoutCreated = true;
             TLRPC.User fromUser = null;
             if (isFromUser()) {
@@ -701,12 +722,19 @@ public class MessageObject {
                 //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", messageOwner.msg_color) + " " + messageOwner.message);
                 if (messageOwner.colored || messageOwner.msg_color > 0) {
                     paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+
                     paint.setColor(messageOwner.msg_color);
                     paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
                 }
                 else {
                     textPaint.setColor(Theme.MSG_TEXT_COLOR);
                     paint = textPaint;
+                }
+                ///STARRING
+                if(messageOwner.starred == 1) {
+                    paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                    paint.setColor(TLRPC.Message.STARRED_COLOR);
+                    paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
                 }
             }
             messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false);
@@ -1231,6 +1259,12 @@ public class MessageObject {
                 textPaint.setColor(Theme.MSG_TEXT_COLOR);
                 paint = textPaint;
             }
+            ///STARRING
+            if(messageOwner.starred == 1) {
+                paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+                paint.setColor(TLRPC.Message.STARRED_COLOR);
+                paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
+            }
         }
         try {
             textLayout = new StaticLayout(messageText, paint, maxWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
@@ -1284,7 +1318,6 @@ public class MessageObject {
                     }
                 }
             }
-
             textLayoutBlocks.add(block);
 
             float lastLeft = block.textXOffset = 0;
