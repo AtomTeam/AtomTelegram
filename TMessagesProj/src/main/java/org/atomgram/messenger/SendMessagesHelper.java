@@ -767,10 +767,9 @@ public class SendMessagesHelper implements NotificationCenter.NotificationCenter
                         ((((color >> 8) & 0xFF) / 85) << 2) +
                         (color & 0xFF / 85);
                 newMsg.flags |= (enc_color << 16);
-//                newMsg.msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440 +
-//                        (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
                 newMsg.msg_color = color;
-
+                newMsg.msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440 +
+                        (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
             }
             ///
             newMsg.fwd_msg_id = msgObj.getId();
@@ -1313,9 +1312,9 @@ public class SendMessagesHelper implements NotificationCenter.NotificationCenter
                                 ((((color >> 8) & 0xFF) / 85) << 2) +
                                 (color & 0xFF / 85);
                         newMsg.flags |= (enc_color << 16);
-//                        newMsg.msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440 +
-//                                (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
                         newMsg.msg_color = color;
+                        newMsg.msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440 +
+                                (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
                     }
                     ///
                 } else if (location != null) {

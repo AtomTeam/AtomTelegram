@@ -537,17 +537,15 @@ public class MessagesStorage {
                         version = 37;
                     }
                     if (version == 37) {
-                        //int defColor = 0xff000000;
-//                        System.out.println("DB UPDATED TO VERSION 37!!!");
-//                        database.executeFast("ALTER TABLE messages ADD COLUMN starred INTEGER default 0").stepThis().dispose();
-//                        database.executeFast("PRAGMA user_version = 38").stepThis().dispose();
+                      //pass this version
                         version = 38;
                     }
                     if (version == 38) {
                         System.out.println("DB UPDATED TO VERSION 38!!!");
                         database.executeFast("ALTER TABLE messages ADD COLUMN starred INTEGER default 0").stepThis().dispose();
                         database.executeFast("PRAGMA user_version = 38").stepThis().dispose();
-//                        version = 38;
+//                      version = 38;
+
                     }
                 } catch (Exception e) {
                     FileLog.e("tmessages", e);

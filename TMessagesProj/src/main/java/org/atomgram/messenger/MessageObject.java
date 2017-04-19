@@ -107,6 +107,7 @@ public class MessageObject {
                 textPaint.setColor(message.msg_color);
             else
                 textPaint.setColor(Theme.MSG_TEXT_COLOR);
+
             ///STARRING
             if(message.starred == 1) {
                 textPaint.setColor(TLRPC.Message.STARRED_COLOR);
@@ -437,6 +438,7 @@ public class MessageObject {
                     paint.setColor(TLRPC.Message.STARRED_COLOR);
                     paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
                 }
+
             }
             int[] emojiOnly = MessagesController.getInstance().allowBigEmoji ? new int[1] : null;
             messageText = Emoji.replaceEmoji(messageText, paint.getFontMetricsInt(), AndroidUtilities.dp(20), false, emojiOnly);
@@ -722,7 +724,6 @@ public class MessageObject {
                 //System.out.println("(TextLayoutPaint) msg_color = " + String.format("0x%08X", messageOwner.msg_color) + " " + messageOwner.message);
                 if (messageOwner.colored || messageOwner.msg_color > 0) {
                     paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-
                     paint.setColor(messageOwner.msg_color);
                     paint.setTextSize(AndroidUtilities.dp(MessagesController.getInstance().fontSize));
                 }

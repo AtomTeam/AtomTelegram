@@ -21462,6 +21462,10 @@ public class TLRPC {
 		public boolean colored = false;
 		public int msg_color = 0;
 		public int starred = 0;
+		public int COLOR_FLAG = 268435456;
+		public boolean colored = false;
+		public int msg_color = 0;
+		//
 		//
         public int send_state = 0; //custom
         public int fwd_msg_id = 0; //custom
@@ -21606,15 +21610,12 @@ public class TLRPC {
 			silent = (flags & 8192) != 0;
 			post = (flags & 16384) != 0;
 			with_my_score = (flags & 1073741824) != 0;
-			//coloring
-			//			colored = (flags & COLOR_FLAG) != 0;
-			//			if(colored) {
-			//				int enc_color = (flags >> 16) & 0xFF;
-			//				msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440
-			//						+ (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
-
-							//System.out.println("(read)" + clr);
-			//			}
+			colored = (flags & COLOR_FLAG) != 0;
+			if(colored) {
+				int enc_color = (flags >> 16) & 0xFF;
+				msg_color = (enc_color & 3) * 85 + (enc_color & 12) * 5440
+						+ (enc_color & 48) * 348160 + (enc_color & 192) * 22282240;
+			}
 			///
 			id = stream.readInt32(exception);
 			if ((flags & 256) != 0) {
@@ -21715,6 +21716,14 @@ public class TLRPC {
 //						(msg_color & 0xFF / 85)) << 16;
 //				flags |= enc_color;
 //			}
+			flags = colored ? (flags | 268435456) : (flags &~ 268435456);
+			if(colored && msg_color != 0) {
+				int enc_color = ((((msg_color >> 24) & 0xFF / 85) << 6) +
+						((((msg_color >> 16) & 0xFF) / 85) << 4) +
+						((((msg_color >> 8) & 0xFF) / 85) << 2) +
+						(msg_color & 0xFF / 85)) << 16;
+				flags |= enc_color;
+			}
 			///
 			stream.writeInt32(flags);
 			stream.writeInt32(id);
@@ -21777,7 +21786,6 @@ public class TLRPC {
 			mentioned = (flags & 16) != 0;
 			media_unread = (flags & 32) != 0;
 			id = stream.readInt32(exception);
-
 
 			if ((flags & 256) != 0) {
 				from_id = stream.readInt32(exception);
